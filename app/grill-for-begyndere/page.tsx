@@ -176,8 +176,8 @@ export default function GrillForBegyndere() {
           </p>
           <div className="video-container">
             <iframe
-              src="https://www.youtube.com/embed/Q5y2voEWJ6U"
-              title="Weber's begynderguide til grillning"
+              src="https://www.youtube.com/embed/6D2A3Ljj33Y"
+              title="Flæskesteg i grill - Tips til tilberedningen"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
