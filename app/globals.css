@@ -1,32 +1,185 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --fire-red: #d32f2f;
-  --charcoal: #212121;
-  --smoke: #757575;
-  --cream: #fafafa;
-  --wood: #8d6e63;
-  --ember: #ff6f00;
+@layer base {
+  :root {
+    --fire-red: #c62828;
+    --ember: #e65100;
+    --charcoal: #1a1a1a;
+    --smoke: #6b7280;
+    --cream: #fdf6ec;
+    --wood: #5d4037;
+    --warm-gray: #f5f0eb;
+    --gold: #f9a825;
+    --dark-surface: #2d2d2d;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--cream);
+    color: var(--charcoal);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  ::selection {
+    background-color: var(--ember);
+    color: white;
+  }
 }
 
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background-color: var(--cream);
+/* Prose styling for article content */
+.prose h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ember);
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--wood);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 1.25rem;
+}
+
+.prose ul, .prose ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+}
+
+.prose li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.prose li strong {
   color: var(--charcoal);
 }
 
-h1, h2, h3 {
-  font-weight: 700;
-}
-
-a {
+.prose a {
   color: var(--fire-red);
-  text-decoration: none;
-  transition: opacity 0.2s;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
 }
 
-a:hover {
-  opacity: 0.8;
+.prose a:hover {
+  color: var(--ember);
+}
+
+.prose em {
+  color: var(--wood);
+  font-style: italic;
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--ember);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background: var(--warm-gray);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: var(--wood);
+}
+
+/* Tip boxes */
+.tip-box {
+  background: linear-gradient(135deg, #fff8e1, #fff3e0);
+  border-left: 4px solid var(--gold);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 12px 12px 0;
+}
+
+.tip-box strong {
+  color: var(--ember);
+}
+
+/* Temperature table */
+.temp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.temp-table th {
+  background: var(--charcoal);
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.temp-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.temp-table tr:nth-child(even) {
+  background: var(--warm-gray);
+}
+
+.temp-table tr:hover {
+  background: #fff3e0;
+}
+
+/* Card hover effect */
+.article-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* YouTube embed */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Image credit */
+.image-credit {
+  font-size: 0.75rem;
+  color: var(--smoke);
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+.image-credit a {
+  color: var(--smoke);
+  text-decoration: underline;
 }
