@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -12,6 +13,13 @@ export default function IsDessertEfterGrillen() {
     <>
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
+        <Image
+          src="https://images.unsplash.com/photo-1528344227352-9a704db46536?w=1400&h=500&fit=crop"
+          alt="Grillede frugter med is serveret som dessert"
+          fill
+          className="object-cover opacity-30"
+          priority
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--obsidian)] via-[var(--obsidian)]/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--obsidian)]/80 to-transparent" />
         <div className="relative z-10 flex flex-col justify-end h-full max-w-4xl mx-auto px-4 pb-10">
@@ -87,6 +95,19 @@ export default function IsDessertEfterGrillen() {
             teksturen. Isen forbliver cremet i stedet for at blive til en pøl på tallerkenen.
           </p>
 
+          <div className="relative rounded-2xl overflow-hidden my-10">
+            <div className="relative h-72 md:h-96">
+              <Image
+                src="https://images.unsplash.com/photo-1693940746660-6025315aac9f?w=800&h=500&fit=crop"
+                alt="Friske frugter på grillen klar til dessert"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@jasonleung" target="_blank" rel="noopener noreferrer">Jason Leung</a> / Unsplash</p>
+          </div>
+
           <h2>Grillede frugter og is</h2>
           <p>
             Vil du løfte desserten et niveau, så grill frugterne. Ferskner, ananas og bananer
@@ -112,6 +133,27 @@ export default function IsDessertEfterGrillen() {
             Regn med ca. to kugler pr. person. Køb lidt mere end du tror du har brug for - is til
             overs er aldrig et problem.
           </p>
+
+          <h2>Se teknikken</h2>
+          <p>
+            Denne video viser hvor nemt det er at lave grillede ferskner med flødeis:
+          </p>
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/fUeGCmCqAUo"
+              title="Grilled Peach Dessert - Grilled Peaches and Cream"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="image-credit">Video: Great Chow (YouTube)</p>
+
+          <h2>Læs videre</h2>
+          <ul>
+            <li>Brug for en <Link href="/grill-for-begyndere">begynderguide til grillen</Link>?</li>
+            <li>Lav en <Link href="/perfekte-ribeye">perfekt ribeye</Link> som hovedret</li>
+            <li>Prøv <Link href="/pulled-pork-paa-grillen">pulled pork</Link> til næste grillselskab</li>
+          </ul>
         </div>
       </article>
     </>

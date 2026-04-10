@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -12,6 +13,13 @@ export default function Om() {
     <>
       {/* Hero - simpler for about page */}
       <div className="relative bg-[var(--obsidian)] overflow-hidden grain-texture">
+        <Image
+          src="https://images.unsplash.com/photo-1529262123100-898cb9e0d85b?w=1400&h=500&fit=crop"
+          alt="Person der griller kød udendørs"
+          fill
+          className="object-cover opacity-20"
+          priority
+        />
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: "radial-gradient(circle at 30% 50%, var(--ember) 0%, transparent 50%)"

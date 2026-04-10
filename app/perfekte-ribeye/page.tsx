@@ -90,6 +90,19 @@ export default function RibeyeGuide() {
             <strong>Timing:</strong> Salt steaken 40-60 minutter før grillning. Saltet trækker først fugt ud, som derefter absorberes tilbage ind i kødet sammen med smagen. 5 minutter før = våd overflade = dårlig skorpe.
           </div>
 
+          <div className="relative rounded-2xl overflow-hidden my-10">
+            <div className="relative h-72 md:h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1602945072881-75915b0f641f?w=800&h=450&fit=crop"
+                alt="Kød på grillen med synlige grillmærker"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@aminhasani" target="_blank" rel="noopener noreferrer">Amin Hasani</a> / Unsplash</p>
+          </div>
+
           <h2>Grillteknik: Reverse Sear</h2>
           <p>
             Reverse sear er den bedste metode til tykke steaks. I stedet for den traditionelle &quot;sear først, færdiggør bagefter&quot; gør du det omvendt - og resultatet er markant bedre.
@@ -195,12 +208,12 @@ export default function RibeyeGuide() {
           <div className="video-container">
             <iframe
               src="https://www.youtube.com/embed/akO6D_tc0lo"
-              title="Reverse sear ribeye steak on the grill"
+              title="How to Reverse-Sear a Steak"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </div>
-          <p className="image-credit">Video: Guga Foods (YouTube)</p>
+          <p className="image-credit">Video: Binging with Babish (YouTube)</p>
 
           <h2>Næste skridt</h2>
           <ul>

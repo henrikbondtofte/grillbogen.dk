@@ -40,7 +40,7 @@ const articles = [
     category: "Opskrifter",
     image:
       "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop",
-    imageCredit: "John Doe",
+    imageCredit: "Sander Dalhuisen",
   },
   {
     slug: "grill-for-begyndere",
@@ -51,6 +51,16 @@ const articles = [
     image:
       "https://images.unsplash.com/photo-1504564321926-4bd1b3929d93?w=600&h=400&fit=crop",
     imageCredit: "Vincent Keiman",
+  },
+  {
+    slug: "is-dessert-efter-grillen",
+    title: "Is som Dessert efter Grillen",
+    excerpt:
+      "Den perfekte afslutning på en grillaften. Fra grillede frugter med flødeis til is-bar for mange gæster.",
+    category: "Dessert",
+    image:
+      "https://images.unsplash.com/photo-1528344227352-9a704db46536?w=600&h=400&fit=crop",
+    imageCredit: "Dale Gray",
   },
 ];
 

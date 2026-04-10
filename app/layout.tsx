@@ -22,6 +22,7 @@ const navLinks = [
   { href: "/perfekte-ribeye", label: "Ribeye Steak" },
   { href: "/pulled-pork-paa-grillen", label: "Pulled Pork" },
   { href: "/grill-for-begyndere", label: "Begynderguide" },
+  { href: "/is-dessert-efter-grillen", label: "Dessert" },
   { href: "/om", label: "Om" },
 ];
 
@@ -31,6 +32,7 @@ const footerArticles = [
   { href: "/perfekte-ribeye", label: "Perfekt Ribeye" },
   { href: "/pulled-pork-paa-grillen", label: "Pulled Pork" },
   { href: "/grill-for-begyndere", label: "Begynderguide" },
+  { href: "/is-dessert-efter-grillen", label: "Dessert efter Grillen" },
 ];
 
 function SchemaMarkup() {

@@ -81,6 +81,19 @@ export default function GasgrillGuide() {
             <strong>Sikkerhed:</strong> Tænd ALDRIG en gasgrill med lukket låg. Gas kan samle sig under låget og antænde eksplosivt. Det lyder dramatisk - og det ER det.
           </div>
 
+          <div className="relative rounded-2xl overflow-hidden my-10">
+            <div className="relative h-72 md:h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1689011266277-f7c82c6f4ce4?w=800&h=450&fit=crop"
+                alt="Nærbillede af gasgrill med brændere klar til brug"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@dvln_dnl" target="_blank" rel="noopener noreferrer">Daniel</a> / Unsplash</p>
+          </div>
+
           <h2>Temperaturzoner - din bedste ven</h2>
           <p>
             Hemmeligheden bag god gasgrillning er temperaturzoner. I stedet for at bruge hele risten ens, opdeler du den i zoner:
@@ -156,6 +169,20 @@ export default function GasgrillGuide() {
           <div className="tip-box">
             <strong>Bedste investering:</strong> Et godt digitalt stegetermometer koster 200-400 kr og er den absolut bedste måde at forbedre dit grillresultat på. Ingen erfaring kan erstatte præcis temperaturmåling.
           </div>
+
+          <h2>Se det i praksis</h2>
+          <p>
+            Denne video giver en god introduktion til gasgrill:
+          </p>
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/LF_UsZYe2_0"
+              title="How to use a gas barbecue"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="image-credit">Video: Which? (YouTube)</p>
 
           <h2>Næste skridt</h2>
           <p>

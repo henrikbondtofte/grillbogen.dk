@@ -95,6 +95,19 @@ export default function KulgrillVsGasgrill() {
             </tbody>
           </table>
 
+          <div className="relative rounded-2xl overflow-hidden my-10">
+            <div className="relative h-72 md:h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1494358856891-c9a46d446c39?w=800&h=450&fit=crop"
+                alt="Glødende kul i kulgrill klar til grillning"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@armandoascorve" target="_blank" rel="noopener noreferrer">Armando Ascorve Morales</a> / Unsplash</p>
+          </div>
+
           <h2>Smagen - her skiller vandene</h2>
           <p>
             Lad os starte med elefanten i rummet. Kulgrill giver en røgsmag som gasgrill simpelthen ikke kan matche. Det er ikke marketing - det er kemi. Når fedt drypper ned på glødende kul, stiger røgen op og giver kødet den karakteristiske grillsmag som de fleste forbinder med &quot;rigtig grill&quot;.
@@ -179,6 +192,20 @@ export default function KulgrillVsGasgrill() {
           <p>
             Mange erfarne grillfolk ender med at have begge. Gasgrillen til hverdagen og kulgrillen til weekend-projekterne. Det er lidt ligesom at have både en hverdagsbil og en sportsvogn - begge har deres plads.
           </p>
+
+          <h2>Se sammenligning i praksis</h2>
+          <p>
+            Her er en god video der gennemgår fordele og ulemper ved begge grilltyper:
+          </p>
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/nP7eNKsZbKc"
+              title="Gas Grill vs Charcoal: Which is Right for You?"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="image-credit">Video: Grill Top Experience (YouTube)</p>
 
           <h2>Læs videre</h2>
           <ul>

@@ -161,6 +161,19 @@ export default function GrillForBegyndere() {
             <li><strong>Slukning:</strong> Luk grillen og lad den køle helt af. Hæld aldrig varme kul i skraldespanden.</li>
           </ul>
 
+          <div className="relative rounded-2xl overflow-hidden my-10">
+            <div className="relative h-72 md:h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1560614382-33bd4daa1b9e?w=800&h=450&fit=crop"
+                alt="Person med grilltang der vender mad på grillen"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@quaritsch" target="_blank" rel="noopener noreferrer">Quaritsch Photography</a> / Unsplash</p>
+          </div>
+
           <h2>Dit næste skridt</h2>
           <p>
             Tillykke - du er i gang! Når du har mestret burgere og pølser, er du klar til at gå videre:
@@ -185,7 +198,7 @@ export default function GrillForBegyndere() {
               allowFullScreen
             />
           </div>
-          <p className="image-credit">Video: Weber Grill (YouTube)</p>
+          <p className="image-credit">Video: Grilltips.dk (YouTube)</p>
         </div>
       </article>
     </>

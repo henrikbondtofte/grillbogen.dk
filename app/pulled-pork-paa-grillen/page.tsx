@@ -168,6 +168,19 @@ export default function PulledPorkGuide() {
             Brug to gafler eller bear claws til at trække kødet fra hinanden i tråde. Fjern eventuelle store fedtstykker. Bland med de opsamlede safter. Server med din yndlings BBQ-sauce.
           </p>
 
+          <div className="relative rounded-2xl overflow-hidden my-10">
+            <div className="relative h-72 md:h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1567529855370-57ecd066454c?w=800&h=450&fit=crop"
+                alt="Saftig pulled pork sandwich med coleslaw"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@pushpak_dsilva" target="_blank" rel="noopener noreferrer">Pushpak Dsilva</a> / Unsplash</p>
+          </div>
+
           <h2>Servering</h2>
           <p>
             Pulled pork er utroligt alsidigt:
@@ -197,12 +210,12 @@ export default function PulledPorkGuide() {
           <div className="video-container">
             <iframe
               src="https://www.youtube.com/embed/LbzEa_juegs"
-              title="Pulled pork på grillen - komplet guide"
+              title="BBQ with Franklin: Pulled Pork"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </div>
-          <p className="image-credit">Video: BBQ med Søren (YouTube)</p>
+          <p className="image-credit">Video: BBQ with Franklin (YouTube)</p>
 
           <h2>Læs videre</h2>
           <ul>
