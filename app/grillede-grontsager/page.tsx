@@ -3,14 +3,50 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Grillede Grøntsager - Guide til Perfekte Grøntsager på Grillen (2026)",
+  title: "Grillede Grøntsager - Perfekte Grøntsager på Grillen (2026)",
   description:
-    "Lær at grille grøntsager korrekt. Temperaturer, tider og teknikker til peberfrugter, squash, majs, aubergine og meget mere. Få det bedste ud af dine grøntsager på grillen.",
+    "Lær at grille grøntsager korrekt. Temperaturer, tider og teknikker til peberfrugter, squash, majs, aubergine og meget mere.",
+  openGraph: {
+    title: "Grillede Grøntsager - Perfekte Grøntsager på Grillen",
+    description:
+      "Lær at grille grøntsager korrekt. Temperaturer, tider og teknikker til peberfrugter, squash, majs og aubergine.",
+    url: "https://grillbogen.dk/grillede-grontsager",
+    siteName: "Grillbogen.dk",
+    locale: "da_DK",
+    type: "article",
+  },
 };
+
+function ArticleSchema() {
+  // All data is hardcoded string literals - no user input involved, safe for JSON-LD rendering
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Grillede Grøntsager - Perfekte Grøntsager på Grillen",
+      description: "Lær at grille grøntsager korrekt. Temperaturer, tider og teknikker til peberfrugter, squash, majs, aubergine og meget mere.",
+      url: "https://grillbogen.dk/grillede-grontsager",
+      publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
+      mainEntityOfPage: "https://grillbogen.dk/grillede-grontsager",
+      inLanguage: "da",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Forside", item: "https://grillbogen.dk" },
+        { "@type": "ListItem", position: 2, name: "Grillede Grøntsager", item: "https://grillbogen.dk/grillede-grontsager" },
+      ],
+    },
+  ];
+  const jsonString = JSON.stringify(schema);
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonString }} />;
+}
 
 export default function GrilledeGrontsager() {
   return (
     <>
+      <ArticleSchema />
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image

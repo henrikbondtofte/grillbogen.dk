@@ -3,14 +3,50 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Is som dessert efter grillen: Sådan vælger du rigtigt (2026)",
+  title: "Is som Dessert efter Grillen - Vælg Rigtigt (2026)",
   description:
-    "Guide til at servere is som den perfekte afslutning på en grillaften. Fra klassisk flødeis til sæsonens sorbetter - og hvorfor kvaliteten af isen gør hele forskellen.",
+    "Guide til at servere is som den perfekte afslutning på en grillaften. Fra klassisk flødeis til sæsonens sorbetter og grillede frugter med is.",
+  openGraph: {
+    title: "Is som Dessert efter Grillen - Vælg Rigtigt",
+    description:
+      "Guide til at servere is som den perfekte afslutning på en grillaften. Fra klassisk flødeis til sæsonens sorbetter.",
+    url: "https://grillbogen.dk/is-dessert-efter-grillen",
+    siteName: "Grillbogen.dk",
+    locale: "da_DK",
+    type: "article",
+  },
 };
+
+function ArticleSchema() {
+  // All data is hardcoded string literals - no user input involved, safe for JSON-LD rendering
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Is som Dessert efter Grillen",
+      description: "Guide til at servere is som den perfekte afslutning på en grillaften. Fra klassisk flødeis til sæsonens sorbetter - og hvorfor kvaliteten af isen gør hele forskellen.",
+      url: "https://grillbogen.dk/is-dessert-efter-grillen",
+      publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
+      mainEntityOfPage: "https://grillbogen.dk/is-dessert-efter-grillen",
+      inLanguage: "da",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Forside", item: "https://grillbogen.dk" },
+        { "@type": "ListItem", position: 2, name: "Is som Dessert efter Grillen", item: "https://grillbogen.dk/is-dessert-efter-grillen" },
+      ],
+    },
+  ];
+  const jsonString = JSON.stringify(schema);
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonString }} />;
+}
 
 export default function IsDessertEfterGrillen() {
   return (
     <>
+      <ArticleSchema />
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
@@ -152,6 +188,7 @@ export default function IsDessertEfterGrillen() {
           <ul>
             <li>Brug for en <Link href="/grill-for-begyndere">begynderguide til grillen</Link>?</li>
             <li>Lav en <Link href="/perfekte-ribeye">perfekt ribeye</Link> som hovedret</li>
+            <li>Server med <Link href="/grillede-grontsager">grillede grøntsager</Link> som tilbehør</li>
             <li>Prøv <Link href="/pulled-pork-paa-grillen">pulled pork</Link> til næste grillselskab</li>
           </ul>
         </div>

@@ -6,11 +6,47 @@ export const metadata: Metadata = {
   title: "Den Perfekte Ribeye Steak på Grillen (2026)",
   description:
     "Step-by-step guide til at grille den perfekte ribeye. Reverse sear teknik, kernetemperaturer, krydring og de tricks der gør forskellen.",
+  openGraph: {
+    title: "Den Perfekte Ribeye Steak på Grillen",
+    description:
+      "Step-by-step guide til at grille den perfekte ribeye. Reverse sear teknik, kernetemperaturer og krydring.",
+    url: "https://grillbogen.dk/perfekte-ribeye",
+    siteName: "Grillbogen.dk",
+    locale: "da_DK",
+    type: "article",
+  },
 };
+
+function ArticleSchema() {
+  // Hardcoded schema data - no user input, safe to render
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Den Perfekte Ribeye Steak på Grillen",
+      description:
+        "Step-by-step guide til at grille den perfekte ribeye. Reverse sear teknik, kernetemperaturer, krydring og de tricks der gør forskellen.",
+      url: "https://grillbogen.dk/perfekte-ribeye",
+      publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
+      mainEntityOfPage: "https://grillbogen.dk/perfekte-ribeye",
+      inLanguage: "da",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Forside", item: "https://grillbogen.dk" },
+        { "@type": "ListItem", position: 2, name: "Den Perfekte Ribeye Steak", item: "https://grillbogen.dk/perfekte-ribeye" },
+      ],
+    },
+  ];
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+}
 
 export default function RibeyeGuide() {
   return (
     <>
+      <ArticleSchema />
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
@@ -219,6 +255,8 @@ export default function RibeyeGuide() {
           <ul>
             <li>Klar til en større udfordring? Prøv <Link href="/pulled-pork-paa-grillen">pulled pork</Link></li>
             <li>Vil du optimere din gasgrill? Læs <Link href="/fuldstaendig-guide-til-gasgrill">gasgrill-guiden</Link></li>
+            <li>Prøv en <Link href="/marinader-til-grill">hjemmelavet marinade til din steak</Link></li>
+            <li>Server med <Link href="/grillede-grontsager">grillede grøntsager som tilbehør</Link></li>
             <li>Helt ny til grill? Start med <Link href="/grill-for-begyndere">begynderguiden</Link></li>
           </ul>
         </div>

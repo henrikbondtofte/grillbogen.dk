@@ -6,11 +6,47 @@ export const metadata: Metadata = {
   title: "Fuldstændig Guide til Gasgrill (2026)",
   description:
     "Lær alt om gasgrill - valg, tænding, temperaturzoner, teknikker og vedligeholdelse. Komplet guide for begyndere og erfarne grillmestre.",
+  openGraph: {
+    title: "Fuldstændig Guide til Gasgrill",
+    description:
+      "Lær alt om gasgrill - valg, tænding, temperaturzoner, teknikker og vedligeholdelse for begyndere og erfarne.",
+    url: "https://grillbogen.dk/fuldstaendig-guide-til-gasgrill",
+    siteName: "Grillbogen.dk",
+    locale: "da_DK",
+    type: "article",
+  },
 };
+
+function ArticleSchema() {
+  // All data is hardcoded string literals - no user input involved, safe for JSON-LD rendering
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Fuldstændig Guide til Gasgrill",
+      description: "Lær alt om gasgrill - valg, tænding, temperaturzoner, teknikker og vedligeholdelse. Komplet guide for begyndere og erfarne grillmestre.",
+      url: "https://grillbogen.dk/fuldstaendig-guide-til-gasgrill",
+      publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
+      mainEntityOfPage: "https://grillbogen.dk/fuldstaendig-guide-til-gasgrill",
+      inLanguage: "da",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Forside", item: "https://grillbogen.dk" },
+        { "@type": "ListItem", position: 2, name: "Guide til Gasgrill", item: "https://grillbogen.dk/fuldstaendig-guide-til-gasgrill" },
+      ],
+    },
+  ];
+  const jsonString = JSON.stringify(schema);
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonString }} />;
+}
 
 export default function GasgrillGuide() {
   return (
     <>
+      <ArticleSchema />
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
@@ -191,6 +227,7 @@ export default function GasgrillGuide() {
           <ul>
             <li>Lær at lave <Link href="/perfekte-ribeye">den perfekte ribeye steak</Link></li>
             <li>Prøv kræfter med <Link href="/pulled-pork-paa-grillen">pulled pork på grillen</Link></li>
+            <li>Hold grillen i topform med vores <Link href="/rengoering-af-grill">rengøringsguide</Link></li>
             <li>Stadig i tvivl om grilltype? Læs <Link href="/kulgrill-vs-gasgrill">kulgrill vs gasgrill</Link></li>
             <li>Helt ny? Start med <Link href="/grill-for-begyndere">vores begynderguide</Link></li>
           </ul>

@@ -6,11 +6,47 @@ export const metadata: Metadata = {
   title: "Kulgrill vs Gasgrill - Hvad Skal Du Vælge? (2026)",
   description:
     "Komplet sammenligning af kulgrill og gasgrill: smag, pris, bekvemmelighed, vedligeholdelse og hvad der passer bedst til dig.",
+  openGraph: {
+    title: "Kulgrill vs Gasgrill - Hvad Skal Du Vælge?",
+    description:
+      "Komplet sammenligning af kulgrill og gasgrill: smag, pris, bekvemmelighed og vedligeholdelse.",
+    url: "https://grillbogen.dk/kulgrill-vs-gasgrill",
+    siteName: "Grillbogen.dk",
+    locale: "da_DK",
+    type: "article",
+  },
 };
+
+function ArticleSchema() {
+  // All data is hardcoded string literals - no user input involved, safe for JSON-LD rendering
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Kulgrill vs Gasgrill - Hvad Skal Du Vælge?",
+      description: "Komplet sammenligning af kulgrill og gasgrill: smag, pris, bekvemmelighed, vedligeholdelse og hvad der passer bedst til dig.",
+      url: "https://grillbogen.dk/kulgrill-vs-gasgrill",
+      publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
+      mainEntityOfPage: "https://grillbogen.dk/kulgrill-vs-gasgrill",
+      inLanguage: "da",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Forside", item: "https://grillbogen.dk" },
+        { "@type": "ListItem", position: 2, name: "Kulgrill vs Gasgrill", item: "https://grillbogen.dk/kulgrill-vs-gasgrill" },
+      ],
+    },
+  ];
+  const jsonString = JSON.stringify(schema);
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonString }} />;
+}
 
 export default function KulgrillVsGasgrill() {
   return (
     <>
+      <ArticleSchema />
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
@@ -211,6 +247,7 @@ export default function KulgrillVsGasgrill() {
           <ul>
             <li>Valgt gasgrill? Læs vores <Link href="/fuldstaendig-guide-til-gasgrill">komplette gasgrill-guide</Link></li>
             <li>Klar til at grille? Start med <Link href="/perfekte-ribeye">den perfekte ribeye</Link></li>
+            <li>Uanset valg: Lær at <Link href="/rengoering-af-grill">vedligeholde din grill</Link></li>
             <li>Første grill? Se <Link href="/grill-for-begyndere">vores begynderguide</Link></li>
             <li>Klar til low &amp; slow? Prøv <Link href="/pulled-pork-paa-grillen">pulled pork</Link></li>
           </ul>

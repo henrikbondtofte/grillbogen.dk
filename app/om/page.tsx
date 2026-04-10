@@ -3,9 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Om Grillbogen.dk",
+  title: "Om Grillbogen.dk - Danmarks Grillguide",
   description:
     "Lær mere om Grillbogen.dk - Danmarks komplette grillguide med guides, opskrifter og teknikker til alle niveauer.",
+  openGraph: {
+    title: "Om Grillbogen.dk",
+    description:
+      "Lær mere om Grillbogen.dk - Danmarks komplette grillguide med guides, opskrifter og teknikker til alle niveauer.",
+    url: "https://grillbogen.dk/om",
+    siteName: "Grillbogen.dk",
+    locale: "da_DK",
+    type: "website",
+  },
 };
 
 export default function Om() {

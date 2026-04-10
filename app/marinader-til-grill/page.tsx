@@ -6,11 +6,47 @@ export const metadata: Metadata = {
   title: "Marinader til Grill - 8 Opskrifter der Virker (2026)",
   description:
     "De bedste marinader til grill: Klassisk BBQ, asiatisk, chimichurri, jerk og mere. Lær teknikken bag en god marinade og hvor længe kød skal marinere.",
+  openGraph: {
+    title: "Marinader til Grill - 8 Opskrifter der Virker",
+    description:
+      "De bedste marinader til grill: Klassisk BBQ, asiatisk, chimichurri, jerk og mere. Lær teknikken bag en god marinade.",
+    url: "https://grillbogen.dk/marinader-til-grill",
+    siteName: "Grillbogen.dk",
+    locale: "da_DK",
+    type: "article",
+  },
 };
+
+function ArticleSchema() {
+  // All data is hardcoded string literals - no user input involved, safe for JSON-LD rendering
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Marinader til Grill - 8 Opskrifter der Virker",
+      description: "De bedste marinader til grill: Klassisk BBQ, asiatisk, chimichurri, jerk og mere. Lær teknikken bag en god marinade og hvor længe kød skal marinere.",
+      url: "https://grillbogen.dk/marinader-til-grill",
+      publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
+      mainEntityOfPage: "https://grillbogen.dk/marinader-til-grill",
+      inLanguage: "da",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Forside", item: "https://grillbogen.dk" },
+        { "@type": "ListItem", position: 2, name: "Marinader til Grill", item: "https://grillbogen.dk/marinader-til-grill" },
+      ],
+    },
+  ];
+  const jsonString = JSON.stringify(schema);
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonString }} />;
+}
 
 export default function MarinaderTilGrill() {
   return (
     <>
+      <ArticleSchema />
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
@@ -302,6 +338,7 @@ export default function MarinaderTilGrill() {
             <li>Prøv marinaden på <Link href="/grillede-grontsager">grillede grøntsager</Link></li>
             <li>Lær at lave en perfekt <Link href="/pulled-pork-paa-grillen">pulled pork med rub</Link></li>
             <li>Test marinaden på en <Link href="/perfekte-ribeye">ribeye steak</Link></li>
+            <li>Ny til grill? Start med <Link href="/grill-for-begyndere">begynderguiden</Link></li>
           </ul>
         </div>
       </article>

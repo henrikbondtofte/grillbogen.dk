@@ -6,11 +6,47 @@ export const metadata: Metadata = {
   title: "Grill for Begyndere - Alt Du Skal Vide (2026)",
   description:
     "Komplet begynderguide til grill. Lær at vælge grill, tænde korrekt, styre temperaturen og lave din første perfekte grillmiddag.",
+  openGraph: {
+    title: "Grill for Begyndere - Alt Du Skal Vide",
+    description:
+      "Komplet begynderguide til grill. Lær at vælge grill, tænde korrekt og lave din første perfekte grillmiddag.",
+    url: "https://grillbogen.dk/grill-for-begyndere",
+    siteName: "Grillbogen.dk",
+    locale: "da_DK",
+    type: "article",
+  },
 };
+
+function ArticleSchema() {
+  // All data is hardcoded string literals - no user input involved, safe for JSON-LD rendering
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Grill for Begyndere - Alt Du Skal Vide",
+      description: "Komplet begynderguide til grill. Lær at vælge grill, tænde korrekt, styre temperaturen og lave din første perfekte grillmiddag.",
+      url: "https://grillbogen.dk/grill-for-begyndere",
+      publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
+      mainEntityOfPage: "https://grillbogen.dk/grill-for-begyndere",
+      inLanguage: "da",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Forside", item: "https://grillbogen.dk" },
+        { "@type": "ListItem", position: 2, name: "Grill for Begyndere", item: "https://grillbogen.dk/grill-for-begyndere" },
+      ],
+    },
+  ];
+  const jsonString = JSON.stringify(schema);
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonString }} />;
+}
 
 export default function GrillForBegyndere() {
   return (
     <>
+      <ArticleSchema />
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
@@ -182,6 +218,7 @@ export default function GrillForBegyndere() {
             <li>Prøv en <Link href="/perfekte-ribeye">ribeye steak</Link> - det er nemmere end du tror</li>
             <li>Lær mere om din gasgrill i vores <Link href="/fuldstaendig-guide-til-gasgrill">komplette gasgrill-guide</Link></li>
             <li>Sammenlign grilltyper i <Link href="/kulgrill-vs-gasgrill">kulgrill vs gasgrill</Link></li>
+            <li>Lær at <Link href="/rengoering-af-grill">rengøre din grill korrekt</Link></li>
             <li>Klar til en udfordring? Prøv <Link href="/pulled-pork-paa-grillen">pulled pork</Link></li>
           </ul>
 

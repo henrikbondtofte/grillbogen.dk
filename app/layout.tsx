@@ -40,19 +40,37 @@ const footerArticles = [
 ];
 
 function SchemaMarkup() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Grillbogen.dk",
-    url: "https://grillbogen.dk",
-    description:
-      "Danmarks komplette grillguide med opskrifter, teknikker og anmeldelser",
-  };
+  // All schema data is hardcoded - no user input, safe to render as JSON-LD
+  const schemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Grillbogen.dk",
+      url: "https://grillbogen.dk",
+      logo: "https://grillbogen.dk/icon.png",
+      description:
+        "Danmarks komplette grillguide med opskrifter, teknikker og anmeldelser",
+      sameAs: [],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Grillbogen.dk",
+      url: "https://grillbogen.dk",
+      description:
+        "Alt om grill - guides, opskrifter, teknikker og anmeldelser. Lær at mestre gasgrill, kulgrill og smoking.",
+      inLanguage: "da",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://grillbogen.dk/?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ];
   return (
     <script
       type="application/ld+json"
-      // Static JSON-LD schema - no user input, safe to inline
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
     />
   );
 }

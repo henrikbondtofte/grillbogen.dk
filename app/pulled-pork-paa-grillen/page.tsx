@@ -6,11 +6,47 @@ export const metadata: Metadata = {
   title: "Pulled Pork på Grillen - Komplet Guide (2026)",
   description:
     "Lær at lave perfekt pulled pork på din grill. Low and slow teknik, rub opskrift, temperaturguide og tips til mørt, saftigt pulled pork med røgsmag.",
+  openGraph: {
+    title: "Pulled Pork på Grillen - Komplet Guide",
+    description:
+      "Lær at lave perfekt pulled pork på din grill. Low and slow teknik, rub opskrift og temperaturguide.",
+    url: "https://grillbogen.dk/pulled-pork-paa-grillen",
+    siteName: "Grillbogen.dk",
+    locale: "da_DK",
+    type: "article",
+  },
 };
+
+function ArticleSchema() {
+  // All data is hardcoded string literals - no user input involved, safe for JSON-LD rendering
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Pulled Pork på Grillen - Komplet Guide",
+      description: "Lær at lave perfekt pulled pork på din grill. Low and slow teknik, rub opskrift, temperaturguide og tips til mørt, saftigt pulled pork med røgsmag.",
+      url: "https://grillbogen.dk/pulled-pork-paa-grillen",
+      publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
+      mainEntityOfPage: "https://grillbogen.dk/pulled-pork-paa-grillen",
+      inLanguage: "da",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Forside", item: "https://grillbogen.dk" },
+        { "@type": "ListItem", position: 2, name: "Pulled Pork på Grillen", item: "https://grillbogen.dk/pulled-pork-paa-grillen" },
+      ],
+    },
+  ];
+  const jsonString = JSON.stringify(schema);
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonString }} />;
+}
 
 export default function PulledPorkGuide() {
   return (
     <>
+      <ArticleSchema />
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
@@ -221,6 +257,8 @@ export default function PulledPorkGuide() {
           <ul>
             <li>Brug for det rette setup? Læs <Link href="/fuldstaendig-guide-til-gasgrill">gasgrill-guiden</Link></li>
             <li>Vil du starte med noget hurtigere? Prøv <Link href="/perfekte-ribeye">en perfekt ribeye</Link></li>
+            <li>Lav en god <Link href="/marinader-til-grill">marinade eller rub til dit kød</Link></li>
+            <li>Slut af med <Link href="/is-dessert-efter-grillen">is som dessert efter grillen</Link></li>
             <li>Ny til grill? Start med <Link href="/grill-for-begyndere">begynderguiden</Link></li>
           </ul>
         </div>

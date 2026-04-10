@@ -3,14 +3,50 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Rengøring af Grill - Komplet Guide til en Ren Grill (2026)",
+  title: "Rengøring af Grill - Komplet Guide til Ren Grill (2026)",
   description:
     "Lær at rengøre din grill korrekt. Vedligeholdelse af gasgrill og kulgrill, fjernelse af fedt og rust, sæsonopbevaring og de bedste rengøringsmidler.",
+  openGraph: {
+    title: "Rengøring af Grill - Komplet Guide til Ren Grill",
+    description:
+      "Lær at rengøre din grill korrekt. Vedligeholdelse, fjernelse af fedt og rust, sæsonopbevaring og rengøringsmidler.",
+    url: "https://grillbogen.dk/rengoering-af-grill",
+    siteName: "Grillbogen.dk",
+    locale: "da_DK",
+    type: "article",
+  },
 };
+
+function ArticleSchema() {
+  // All data is hardcoded string literals - no user input involved, safe for JSON-LD rendering
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Rengøring af Grill - Komplet Guide til en Ren Grill",
+      description: "Lær at rengøre din grill korrekt. Vedligeholdelse af gasgrill og kulgrill, fjernelse af fedt og rust, sæsonopbevaring og de bedste rengøringsmidler.",
+      url: "https://grillbogen.dk/rengoering-af-grill",
+      publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
+      mainEntityOfPage: "https://grillbogen.dk/rengoering-af-grill",
+      inLanguage: "da",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Forside", item: "https://grillbogen.dk" },
+        { "@type": "ListItem", position: 2, name: "Rengøring af Grill", item: "https://grillbogen.dk/rengoering-af-grill" },
+      ],
+    },
+  ];
+  const jsonString = JSON.stringify(schema);
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonString }} />;
+}
 
 export default function RengoeringAfGrill() {
   return (
     <>
+      <ArticleSchema />
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
