@@ -12,33 +12,36 @@ export default function PulledPorkGuide() {
   return (
     <>
       {/* Hero */}
-      <div className="relative h-64 md:h-80 bg-[var(--charcoal)]">
+      <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
-          src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1400&h=400&fit=crop"
+          src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1400&h=500&fit=crop"
           alt="Saftigt pulled pork med røgsmag"
           fill
-          className="object-cover opacity-50"
+          className="object-cover opacity-30"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--charcoal)] to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 max-w-4xl mx-auto px-4 pb-8">
-          <span className="inline-block bg-[var(--ember)] text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
-            OPSKRIFTER
-          </span>
-          <h1 className="text-3xl md:text-5xl font-extrabold text-white">
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--obsidian)] via-[var(--obsidian)]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--obsidian)]/80 to-transparent" />
+        <div className="relative z-10 flex flex-col justify-end h-full max-w-4xl mx-auto px-4 pb-10">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="category-badge">Opskrifter</span>
+            <div className="h-px w-8 bg-[var(--ember)]/50" />
+          </div>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Outfit', sans-serif" }}>
             Pulled Pork på Grillen
           </h1>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[var(--parchment)] to-transparent" />
       </div>
 
       <article className="max-w-4xl mx-auto px-4 py-10">
-        <nav className="text-sm text-[var(--smoke)] mb-6">
-          <Link href="/" className="hover:text-[var(--ember)] no-underline">Forside</Link>
-          <span className="mx-2">/</span>
-          <span>Pulled Pork</span>
+        <nav className="text-sm text-[var(--ash)] mb-8 flex items-center gap-2">
+          <Link href="/" className="hover:text-[var(--ember)] no-underline transition-colors">Forside</Link>
+          <svg className="w-3.5 h-3.5 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <span className="text-[var(--charcoal)] font-medium">Pulled Pork</span>
         </nav>
 
-        <p className="text-xl text-[var(--smoke)] mb-8 leading-relaxed">
+        <p className="text-xl text-stone-500 mb-10 leading-relaxed max-w-2xl">
           Pulled pork er den ultimative grilltest. Det kræver tålmodighed, den rette teknik og en hel dag - men belønningen er kød der nærmest falder fra hinanden af sig selv. Her er alt du skal vide for at nagle det.
         </p>
 
@@ -67,8 +70,8 @@ export default function PulledPorkGuide() {
             En god rub er grundlaget for smagen. Her er en gennemtestet opskrift til ca. 3 kg svinenakke:
           </p>
 
-          <div className="bg-[var(--warm-gray)] rounded-xl p-6 my-6">
-            <h3 className="text-[var(--charcoal)] mt-0 border-0">Klassisk Pulled Pork Rub</h3>
+          <div className="bg-white rounded-2xl p-7 my-8 shadow-sm border border-stone-100">
+            <h3 className="text-[var(--charcoal)] mt-0 border-0 !mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>Klassisk Pulled Pork Rub</h3>
             <ul className="columns-2">
               <li>3 spsk brunt sukker</li>
               <li>2 spsk paprika</li>
@@ -79,7 +82,7 @@ export default function PulledPorkGuide() {
               <li>1 tsk cayennepeber</li>
               <li>1 tsk spidskommen</li>
             </ul>
-            <p className="text-sm text-[var(--smoke)] mt-3 mb-0">
+            <p className="text-sm text-[var(--ash)] mt-4 mb-0">
               Bland det hele og gnid det grundigt ind i kødet. Gerne aftenen før og lad det stå i køleskabet natten over.
             </p>
           </div>

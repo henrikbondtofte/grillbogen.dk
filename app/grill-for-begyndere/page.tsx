@@ -12,33 +12,36 @@ export default function GrillForBegyndere() {
   return (
     <>
       {/* Hero */}
-      <div className="relative h-64 md:h-80 bg-[var(--charcoal)]">
+      <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
-          src="https://images.unsplash.com/photo-1504564321926-4bd1b3929d93?w=1400&h=400&fit=crop"
+          src="https://images.unsplash.com/photo-1504564321926-4bd1b3929d93?w=1400&h=500&fit=crop"
           alt="Person der griller udendørs i solskin"
           fill
-          className="object-cover opacity-50"
+          className="object-cover opacity-30"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--charcoal)] to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 max-w-4xl mx-auto px-4 pb-8">
-          <span className="inline-block bg-[var(--ember)] text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
-            GUIDES
-          </span>
-          <h1 className="text-3xl md:text-5xl font-extrabold text-white">
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--obsidian)] via-[var(--obsidian)]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--obsidian)]/80 to-transparent" />
+        <div className="relative z-10 flex flex-col justify-end h-full max-w-4xl mx-auto px-4 pb-10">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="category-badge">Guides</span>
+            <div className="h-px w-8 bg-[var(--ember)]/50" />
+          </div>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Outfit', sans-serif" }}>
             Grill for Begyndere
           </h1>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[var(--parchment)] to-transparent" />
       </div>
 
       <article className="max-w-4xl mx-auto px-4 py-10">
-        <nav className="text-sm text-[var(--smoke)] mb-6">
-          <Link href="/" className="hover:text-[var(--ember)] no-underline">Forside</Link>
-          <span className="mx-2">/</span>
-          <span>Grill for Begyndere</span>
+        <nav className="text-sm text-[var(--ash)] mb-8 flex items-center gap-2">
+          <Link href="/" className="hover:text-[var(--ember)] no-underline transition-colors">Forside</Link>
+          <svg className="w-3.5 h-3.5 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <span className="text-[var(--charcoal)] font-medium">Grill for Begyndere</span>
         </nav>
 
-        <p className="text-xl text-[var(--smoke)] mb-8 leading-relaxed">
+        <p className="text-xl text-stone-500 mb-10 leading-relaxed max-w-2xl">
           Første gang med grillen? Ingen stress. Grill er ikke raketvidenskab - det er mad over ild. Denne guide tager dig fra &quot;jeg har aldrig tændt en grill&quot; til &quot;den middag var fantastisk&quot; på én eftermiddag.
         </p>
 
@@ -77,8 +80,8 @@ export default function GrillForBegyndere() {
             Du behøver ikke en masse udstyr for at komme i gang. Her er det absolutte minimum:
           </p>
 
-          <div className="bg-[var(--warm-gray)] rounded-xl p-6 my-6">
-            <h3 className="text-[var(--charcoal)] mt-0 border-0">Starter-kit (under 500 kr)</h3>
+          <div className="bg-white rounded-2xl p-7 my-8 shadow-sm border border-stone-100">
+            <h3 className="text-[var(--charcoal)] mt-0 border-0 !mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>Starter-kit (under 500 kr)</h3>
             <ol>
               <li><strong>Grilltang</strong> - Lang, med fjedrende greb. Dit vigtigste redskab.</li>
               <li><strong>Stegetermometer</strong> - Digital, instant-read. Stop med at gætte.</li>
@@ -108,7 +111,7 @@ export default function GrillForBegyndere() {
           <h3>Forberedelse</h3>
           <ol>
             <li>Form burgere: ca. 150g per burger, 2 cm tykke. Lav en lille fordybning i midten (forhindrer at de buler op).</li>
-            <li>Krydre med salt og peber. Ferdig. Ingen æg, ingen rasp, ingen hakkede løg. Hold det simpelt.</li>
+            <li>Krydre med salt og peber. Færdig. Ingen æg, ingen rasp, ingen hakkede løg. Hold det simpelt.</li>
             <li>Lad pølser og burgere nå stuetemperatur (20-30 min ud af køleskabet).</li>
           </ol>
 

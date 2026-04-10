@@ -12,33 +12,36 @@ export default function RibeyeGuide() {
   return (
     <>
       {/* Hero */}
-      <div className="relative h-64 md:h-80 bg-[var(--charcoal)]">
+      <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
-          src="https://images.unsplash.com/photo-1558030006-450675393462?w=1400&h=400&fit=crop"
+          src="https://images.unsplash.com/photo-1558030006-450675393462?w=1400&h=500&fit=crop"
           alt="Perfekt grillet ribeye steak med grillmærker"
           fill
-          className="object-cover opacity-50"
+          className="object-cover opacity-30"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--charcoal)] to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 max-w-4xl mx-auto px-4 pb-8">
-          <span className="inline-block bg-[var(--ember)] text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
-            OPSKRIFTER
-          </span>
-          <h1 className="text-3xl md:text-5xl font-extrabold text-white">
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--obsidian)] via-[var(--obsidian)]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--obsidian)]/80 to-transparent" />
+        <div className="relative z-10 flex flex-col justify-end h-full max-w-4xl mx-auto px-4 pb-10">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="category-badge">Opskrifter</span>
+            <div className="h-px w-8 bg-[var(--ember)]/50" />
+          </div>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Outfit', sans-serif" }}>
             Den Perfekte Ribeye Steak
           </h1>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[var(--parchment)] to-transparent" />
       </div>
 
       <article className="max-w-4xl mx-auto px-4 py-10">
-        <nav className="text-sm text-[var(--smoke)] mb-6">
-          <Link href="/" className="hover:text-[var(--ember)] no-underline">Forside</Link>
-          <span className="mx-2">/</span>
-          <span>Perfekt Ribeye</span>
+        <nav className="text-sm text-[var(--ash)] mb-8 flex items-center gap-2">
+          <Link href="/" className="hover:text-[var(--ember)] no-underline transition-colors">Forside</Link>
+          <svg className="w-3.5 h-3.5 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <span className="text-[var(--charcoal)] font-medium">Perfekt Ribeye</span>
         </nav>
 
-        <p className="text-xl text-[var(--smoke)] mb-8 leading-relaxed">
+        <p className="text-xl text-stone-500 mb-10 leading-relaxed max-w-2xl">
           Ribeye er kongen af steaks. Marmoreringen giver en smag og saftighed som ingen anden udskæring kan matche. Her er alt du skal vide for at nagle den - fra slagteren til tallerkenen.
         </p>
 
@@ -133,7 +136,7 @@ export default function RibeyeGuide() {
                 <td>50-52°C</td>
                 <td>Rød, kølig midte</td>
               </tr>
-              <tr className="bg-[#fff3e0]">
+              <tr className="!bg-[var(--sand)]">
                 <td><strong>Medium rare ★</strong></td>
                 <td>52-55°C</td>
                 <td>54-57°C</td>
