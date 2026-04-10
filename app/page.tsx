@@ -62,6 +62,36 @@ const articles = [
       "https://images.unsplash.com/photo-1528344227352-9a704db46536?w=600&h=400&fit=crop",
     imageCredit: "Dale Gray",
   },
+  {
+    slug: "grillede-grontsager",
+    title: "Grillede Grøntsager",
+    excerpt:
+      "Komplet guide til grøntsager på grillen. Temperaturer, tider og teknikker til peberfrugter, squash, majs og meget mere.",
+    category: "Teknik",
+    image:
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
+    imageCredit: "Lily Banse",
+  },
+  {
+    slug: "rengoering-af-grill",
+    title: "Rengøring af Grill",
+    excerpt:
+      "Hold din grill i topform. Vedligeholdelse efter hver brug, sæsonrengøring, rustfjernelse og opbevaring.",
+    category: "Vedligeholdelse",
+    image:
+      "https://images.unsplash.com/photo-1529193591184-b1d58069ecf0?w=600&h=400&fit=crop",
+    imageCredit: "Evan Wise",
+  },
+  {
+    slug: "marinader-til-grill",
+    title: "Marinader til Grill",
+    excerpt:
+      "8 gennemtestede marinader fra klassisk BBQ til koreansk bulgogi. Plus teknikken bag en god marinade.",
+    category: "Opskrifter",
+    image:
+      "https://images.unsplash.com/photo-1558030006-450675393462?w=600&h=400&fit=crop",
+    imageCredit: "Emerson Vieira",
+  },
 ];
 
 export default function Home() {

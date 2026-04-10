@@ -21,8 +21,10 @@ const navLinks = [
   { href: "/kulgrill-vs-gasgrill", label: "Kulgrill vs Gasgrill" },
   { href: "/perfekte-ribeye", label: "Ribeye Steak" },
   { href: "/pulled-pork-paa-grillen", label: "Pulled Pork" },
+  { href: "/grillede-grontsager", label: "Grøntsager" },
+  { href: "/marinader-til-grill", label: "Marinader" },
+  { href: "/rengoering-af-grill", label: "Rengøring" },
   { href: "/grill-for-begyndere", label: "Begynderguide" },
-  { href: "/is-dessert-efter-grillen", label: "Dessert" },
   { href: "/om", label: "Om" },
 ];
 
@@ -31,8 +33,10 @@ const footerArticles = [
   { href: "/kulgrill-vs-gasgrill", label: "Kulgrill vs Gasgrill" },
   { href: "/perfekte-ribeye", label: "Perfekt Ribeye" },
   { href: "/pulled-pork-paa-grillen", label: "Pulled Pork" },
+  { href: "/grillede-grontsager", label: "Grillede Grøntsager" },
+  { href: "/marinader-til-grill", label: "Marinader til Grill" },
+  { href: "/rengoering-af-grill", label: "Rengøring af Grill" },
   { href: "/grill-for-begyndere", label: "Begynderguide" },
-  { href: "/is-dessert-efter-grillen", label: "Dessert efter Grillen" },
 ];
 
 function SchemaMarkup() {
