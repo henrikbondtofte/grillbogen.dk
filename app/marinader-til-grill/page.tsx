@@ -63,7 +63,7 @@ export default function MarinaderTilGrill() {
             <span className="category-badge">Opskrifter</span>
             <div className="h-px w-8 bg-[var(--ember)]/50" />
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Outfit', sans-serif" }}>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>
             Marinader til Grill
           </h1>
         </div>
@@ -178,7 +178,7 @@ export default function MarinaderTilGrill() {
 
           <h3>1. Klassisk BBQ</h3>
           <div className="bg-white rounded-2xl p-7 my-6 shadow-sm border border-stone-100">
-            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Outfit', sans-serif" }}>Ingredienser</h4>
+            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>Ingredienser</h4>
             <ul className="columns-2 !mt-0">
               <li>4 spsk olivenolie</li>
               <li>2 spsk æblecidereddike</li>
@@ -194,7 +194,7 @@ export default function MarinaderTilGrill() {
 
           <h3>2. Asiatisk soja-ingefær</h3>
           <div className="bg-white rounded-2xl p-7 my-6 shadow-sm border border-stone-100">
-            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Outfit', sans-serif" }}>Ingredienser</h4>
+            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>Ingredienser</h4>
             <ul className="columns-2 !mt-0">
               <li>3 spsk sojasauce</li>
               <li>2 spsk sesamolie</li>
@@ -210,7 +210,7 @@ export default function MarinaderTilGrill() {
 
           <h3>3. Argentinsk chimichurri</h3>
           <div className="bg-white rounded-2xl p-7 my-6 shadow-sm border border-stone-100">
-            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Outfit', sans-serif" }}>Ingredienser</h4>
+            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>Ingredienser</h4>
             <ul className="columns-2 !mt-0">
               <li>1 stort bundt persille</li>
               <li>4 fed hvidløg</li>
@@ -225,7 +225,7 @@ export default function MarinaderTilGrill() {
 
           <h3>4. Jamaicansk jerk</h3>
           <div className="bg-white rounded-2xl p-7 my-6 shadow-sm border border-stone-100">
-            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Outfit', sans-serif" }}>Ingredienser</h4>
+            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>Ingredienser</h4>
             <ul className="columns-2 !mt-0">
               <li>3 spsk olivenolie</li>
               <li>2 spsk limesaft</li>
@@ -243,7 +243,7 @@ export default function MarinaderTilGrill() {
 
           <h3>5. Middelhavs citron-urter</h3>
           <div className="bg-white rounded-2xl p-7 my-6 shadow-sm border border-stone-100">
-            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Outfit', sans-serif" }}>Ingredienser</h4>
+            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>Ingredienser</h4>
             <ul className="columns-2 !mt-0">
               <li>5 spsk olivenolie</li>
               <li>Saft og skal af 1 citron</li>
@@ -258,7 +258,7 @@ export default function MarinaderTilGrill() {
 
           <h3>6. Koreansk bulgogi</h3>
           <div className="bg-white rounded-2xl p-7 my-6 shadow-sm border border-stone-100">
-            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Outfit', sans-serif" }}>Ingredienser</h4>
+            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>Ingredienser</h4>
             <ul className="columns-2 !mt-0">
               <li>4 spsk sojasauce</li>
               <li>2 spsk sesamolie</li>
@@ -273,7 +273,7 @@ export default function MarinaderTilGrill() {
 
           <h3>7. Tandoori-inspireret yoghurt</h3>
           <div className="bg-white rounded-2xl p-7 my-6 shadow-sm border border-stone-100">
-            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Outfit', sans-serif" }}>Ingredienser</h4>
+            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>Ingredienser</h4>
             <ul className="columns-2 !mt-0">
               <li>2 dl græsk yoghurt</li>
               <li>2 spsk olivenolie</li>
@@ -290,7 +290,7 @@ export default function MarinaderTilGrill() {
 
           <h3>8. Honning-sennep</h3>
           <div className="bg-white rounded-2xl p-7 my-6 shadow-sm border border-stone-100">
-            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Outfit', sans-serif" }}>Ingredienser</h4>
+            <h4 className="text-[var(--charcoal)] mt-0 border-0 !mb-3 !text-base" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>Ingredienser</h4>
             <ul className="columns-2 !mt-0">
               <li>3 spsk olivenolie</li>
               <li>2 spsk grov sennep</li>

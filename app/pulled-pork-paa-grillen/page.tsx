@@ -63,7 +63,7 @@ export default function PulledPorkGuide() {
             <span className="category-badge">Opskrifter</span>
             <div className="h-px w-8 bg-[var(--ember)]/50" />
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Outfit', sans-serif" }}>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>
             Pulled Pork på Grillen
           </h1>
         </div>
@@ -107,7 +107,7 @@ export default function PulledPorkGuide() {
           </p>
 
           <div className="bg-white rounded-2xl p-7 my-8 shadow-sm border border-stone-100">
-            <h3 className="text-[var(--charcoal)] mt-0 border-0 !mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>Klassisk Pulled Pork Rub</h3>
+            <h3 className="text-[var(--charcoal)] mt-0 border-0 !mb-4" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>Klassisk Pulled Pork Rub</h3>
             <ul className="columns-2">
               <li>3 spsk brunt sukker</li>
               <li>2 spsk paprika</li>

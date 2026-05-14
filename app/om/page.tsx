@@ -39,7 +39,7 @@ export default function Om() {
             <div className="h-px w-12 bg-gradient-to-r from-[var(--ember)] to-transparent" />
             <span className="text-xs font-bold text-[var(--ember)] uppercase tracking-[0.25em]">Om os</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Outfit', sans-serif" }}>
+          <h1 className="text-4xl md:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>
             Om Grillbogen.dk
           </h1>
         </div>
@@ -103,7 +103,7 @@ export default function Om() {
               { title: "Fællesskab", desc: "Grill samler mennesker. Det er hele pointen." },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-2xl p-6 shadow-sm border border-stone-100">
-                <h4 className="text-base font-bold text-[var(--charcoal)] mb-2" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                <h4 className="text-base font-bold text-[var(--charcoal)] mb-2" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>
                   {item.title}
                 </h4>
                 <p className="text-sm text-stone-500 leading-relaxed m-0">

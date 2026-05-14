@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
-    default: "Grillbogen.dk - Danmarks Komplette Grillguide",
+    default: "Grillbogen.dk - Det danske grilltidsskrift",
     template: "%s | Grillbogen.dk",
   },
   description:
-    "Alt om grill - guides, opskrifter, teknikker og anmeldelser. Lær at mestre gasgrill, kulgrill og smoking.",
+    "Et redaktionelt grillmagasin om røg, glød og håndværk. Guides, opskrifter, teknikker og anmeldelser - fra første tænding til perfekt brisket.",
   openGraph: {
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -17,25 +17,25 @@ export const metadata: Metadata = {
 };
 
 const navLinks = [
-  { href: "/fuldstaendig-guide-til-gasgrill", label: "Gasgrill Guide" },
-  { href: "/kulgrill-vs-gasgrill", label: "Kulgrill vs Gasgrill" },
-  { href: "/perfekte-ribeye", label: "Ribeye Steak" },
-  { href: "/pulled-pork-paa-grillen", label: "Pulled Pork" },
+  { href: "/fuldstaendig-guide-til-gasgrill", label: "Gasgrill" },
+  { href: "/kulgrill-vs-gasgrill", label: "Kul vs. gas" },
+  { href: "/perfekte-ribeye", label: "Ribeye" },
+  { href: "/pulled-pork-paa-grillen", label: "Pulled pork" },
   { href: "/grillede-grontsager", label: "Grøntsager" },
   { href: "/marinader-til-grill", label: "Marinader" },
   { href: "/rengoering-af-grill", label: "Rengøring" },
-  { href: "/grill-for-begyndere", label: "Begynderguide" },
+  { href: "/grill-for-begyndere", label: "Begynder" },
   { href: "/om", label: "Om" },
 ];
 
 const footerArticles = [
-  { href: "/fuldstaendig-guide-til-gasgrill", label: "Guide til Gasgrill" },
-  { href: "/kulgrill-vs-gasgrill", label: "Kulgrill vs Gasgrill" },
-  { href: "/perfekte-ribeye", label: "Perfekt Ribeye" },
-  { href: "/pulled-pork-paa-grillen", label: "Pulled Pork" },
-  { href: "/grillede-grontsager", label: "Grillede Grøntsager" },
-  { href: "/marinader-til-grill", label: "Marinader til Grill" },
-  { href: "/rengoering-af-grill", label: "Rengøring af Grill" },
+  { href: "/fuldstaendig-guide-til-gasgrill", label: "Guide til gasgrill" },
+  { href: "/kulgrill-vs-gasgrill", label: "Kulgrill vs. gasgrill" },
+  { href: "/perfekte-ribeye", label: "Perfekt ribeye" },
+  { href: "/pulled-pork-paa-grillen", label: "Pulled pork" },
+  { href: "/grillede-grontsager", label: "Grillede grøntsager" },
+  { href: "/marinader-til-grill", label: "Marinader" },
+  { href: "/rengoering-af-grill", label: "Rengøring af grill" },
   { href: "/grill-for-begyndere", label: "Begynderguide" },
 ];
 
@@ -49,7 +49,7 @@ function SchemaMarkup() {
       url: "https://grillbogen.dk",
       logo: "https://grillbogen.dk/icon.png",
       description:
-        "Danmarks komplette grillguide med opskrifter, teknikker og anmeldelser",
+        "Et redaktionelt grillmagasin med opskrifter, teknikker og anmeldelser",
       sameAs: [],
     },
     {
@@ -58,7 +58,7 @@ function SchemaMarkup() {
       name: "Grillbogen.dk",
       url: "https://grillbogen.dk",
       description:
-        "Alt om grill - guides, opskrifter, teknikker og anmeldelser. Lær at mestre gasgrill, kulgrill og smoking.",
+        "Et redaktionelt grillmagasin om røg, glød og håndværk.",
       inLanguage: "da",
       potentialAction: {
         "@type": "SearchAction",
@@ -90,71 +90,72 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600;1,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
       </head>
       <body>
-        {/* Navigation */}
-        <nav className="bg-[var(--obsidian)] sticky top-0 z-50 border-b border-white/5">
+        {/* Top issue strip */}
+        <div className="bg-[var(--ink)] text-[var(--butter)] text-[0.65rem] tracking-[0.3em] uppercase">
+          <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+            <span className="hidden sm:inline">Vol. 01 · Det danske grilltidsskrift</span>
+            <span className="sm:hidden">Grillbogen</span>
+            <span className="flex items-center gap-2">
+              <svg width="11" height="14" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M7 17.5c-3.3 0-6-2.3-6-5.4 0-2 1.2-3.4 2.4-4.7C3.6 9.1 4 10 4.7 10.6 4 8.2 5.4 6.6 7 4.6c1.6 2 3 3.6 2.3 6 .7-.6 1.1-1.5 1.3-3.2 1.2 1.3 2.4 2.7 2.4 4.7 0 3.1-2.7 5.4-6 5.4z" fill="var(--ember)"/>
+              </svg>
+              <span>Røg · Glød · Håndværk</span>
+            </span>
+          </div>
+        </div>
+
+        {/* Masthead */}
+        <header className="bg-[var(--paper)] border-b border-[var(--paper-edge)] sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4">
-            <div className="flex justify-between items-center h-18">
-              <Link
-                href="/"
-                className="flex items-center gap-3 no-underline group"
-              >
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--ember)] to-[var(--copper)] flex items-center justify-center shadow-lg shadow-orange-900/20 group-hover:shadow-orange-900/40 transition-shadow">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C8.5 6 4 9 4 14a8 8 0 0016 0c0-5-4.5-8-8-12z" fill="white" opacity="0.9"/>
-                    <path d="M12 8c-2 2.5-4 4.5-4 7a4 4 0 008 0c0-2.5-2-4.5-4-7z" fill="var(--obsidian)" opacity="0.3"/>
-                  </svg>
-                </div>
-                <div>
-                  <span className="text-lg font-extrabold text-white tracking-tight block leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
+            <div className="flex items-center justify-between gap-6 py-4">
+              <Link href="/" className="flex items-center gap-3 no-underline group">
+                <svg width="42" height="42" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="32" cy="32" r="30" fill="var(--wine)" />
+                  <circle cx="32" cy="32" r="30" fill="none" stroke="var(--butter)" strokeWidth="1.5" strokeDasharray="2 3" opacity="0.7" />
+                  <text x="32" y="42" textAnchor="middle" fontFamily="Fraunces, Georgia, serif" fontWeight="700" fontSize="30" fill="var(--butter)" fontStyle="italic">G</text>
+                </svg>
+                <div className="leading-none">
+                  <span
+                    className="block text-[1.6rem] font-bold text-[var(--ink)]"
+                    style={{ fontFamily: "'Fraunces', Georgia, serif", letterSpacing: "-0.025em" }}
+                  >
                     Grillbogen
                   </span>
-                  <span className="text-[0.65rem] font-medium text-[var(--ember)] uppercase tracking-widest">
-                    Danmarks Grillguide
+                  <span className="block mt-1 text-[0.6rem] font-bold tracking-[0.3em] uppercase text-[var(--wine)]">
+                    Det danske grillmagasin
                   </span>
                 </div>
               </Link>
 
-              {/* Desktop nav */}
-              <div className="hidden lg:flex items-center gap-0.5">
+              <nav className="hidden lg:flex items-center gap-5">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="nav-link text-sm text-stone-400 hover:text-white px-3.5 py-2 rounded-lg transition-colors no-underline font-medium"
+                    className="nav-link text-[0.85rem] text-[var(--char)] hover:text-[var(--wine)] transition-colors no-underline"
                   >
                     {link.label}
                   </Link>
                 ))}
-              </div>
+              </nav>
 
-              {/* Mobile menu button */}
               <details className="lg:hidden relative">
-                <summary className="list-none cursor-pointer text-stone-400 hover:text-white p-2 transition-colors">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
+                <summary className="list-none cursor-pointer text-[var(--char)] hover:text-[var(--wine)] p-2 transition-colors">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M4 7h16M4 12h16M4 17h16" />
                   </svg>
                 </summary>
-                <div className="absolute right-0 top-14 bg-[var(--iron)] rounded-2xl shadow-2xl py-3 w-64 border border-white/10 backdrop-blur-sm">
+                <div className="absolute right-0 top-12 bg-[var(--paper)] border border-[var(--paper-edge)] shadow-[8px_10px_0_var(--paper-edge)] py-3 w-64 z-50">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="block px-5 py-3.5 text-sm text-stone-300 hover:text-white hover:bg-white/5 no-underline font-medium transition-colors"
+                      className="block px-5 py-3 text-sm text-[var(--char)] hover:text-[var(--wine)] hover:bg-[var(--paper-soft)] no-underline font-medium transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -163,46 +164,54 @@ export default function RootLayout({
               </details>
             </div>
           </div>
-        </nav>
+        </header>
 
         <main className="min-h-screen">{children}</main>
 
         {/* Footer */}
-        <footer className="bg-[var(--obsidian)] text-stone-500 relative grain-texture overflow-hidden">
-          {/* Top accent line */}
-          <div className="h-1 bg-gradient-to-r from-transparent via-[var(--ember)] to-transparent opacity-40" />
+        <footer className="bg-[var(--ink)] text-[var(--smoke)] relative overflow-hidden">
+          <div className="absolute inset-0 grain-texture pointer-events-none" />
+          <div className="h-[3px] bg-gradient-to-r from-transparent via-[var(--ember)] to-transparent opacity-60" />
 
-          <div className="relative z-10 max-w-6xl mx-auto px-4 py-20">
-            <div className="grid md:grid-cols-3 gap-16">
-              {/* Brand */}
-              <div>
+          <div className="relative z-10 max-w-6xl mx-auto px-4 pt-20 pb-12">
+            <div className="grid md:grid-cols-12 gap-10 md:gap-14 mb-16">
+              <div className="md:col-span-5">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[var(--ember)] to-[var(--copper)] flex items-center justify-center">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2C8.5 6 4 9 4 14a8 8 0 0016 0c0-5-4.5-8-8-12z" fill="white" opacity="0.9"/>
-                    </svg>
-                  </div>
-                  <span className="text-lg font-extrabold text-white tracking-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-                    Grillbogen<span className="text-[var(--ember)]">.dk</span>
+                  <svg width="36" height="36" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="32" cy="32" r="30" fill="var(--wine)" />
+                    <circle cx="32" cy="32" r="30" fill="none" stroke="var(--butter)" strokeWidth="1.5" strokeDasharray="2 3" opacity="0.7" />
+                    <text x="32" y="42" textAnchor="middle" fontFamily="Fraunces, Georgia, serif" fontWeight="700" fontSize="30" fill="var(--butter)" fontStyle="italic">G</text>
+                  </svg>
+                  <span className="text-2xl font-bold text-[var(--paper)]" style={{ fontFamily: "'Fraunces', Georgia, serif" }}>
+                    Grillbogen<span className="text-[var(--ember)]">.</span>
                   </span>
                 </div>
-                <p className="text-sm leading-relaxed text-stone-500">
-                  Danmarks komplette grillguide. Fra den første tænding til
-                  perfekt pulled pork - alt hvad du skal vide om grill.
+                <p className="text-sm leading-relaxed text-[var(--smoke)] max-w-md">
+                  Et redaktionelt grillmagasin om røg, glød og håndværk.
+                  Konkrete guides, testede opskrifter og anmeldelser uden
+                  reklamesnak - skrevet til grillen, ikke til algoritmen.
                 </p>
+                <div className="mt-6 flex items-center gap-2 text-[0.65rem] tracking-[0.3em] uppercase text-[var(--saffron)]">
+                  <svg width="11" height="14" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M7 17.5c-3.3 0-6-2.3-6-5.4 0-2 1.2-3.4 2.4-4.7C3.6 9.1 4 10 4.7 10.6 4 8.2 5.4 6.6 7 4.6c1.6 2 3 3.6 2.3 6 .7-.6 1.1-1.5 1.3-3.2 1.2 1.3 2.4 2.7 2.4 4.7 0 3.1-2.7 5.4-6 5.4z" fill="var(--ember)"/>
+                  </svg>
+                  <span>Vol. 01 · Forår 2026</span>
+                </div>
               </div>
 
-              {/* Articles */}
-              <div>
-                <h4 className="text-stone-300 font-bold mb-5 text-xs uppercase tracking-[0.2em]" style={{ fontFamily: "'Outfit', sans-serif" }}>
-                  Populære Guides
+              <div className="md:col-span-4">
+                <h4 className="text-[0.65rem] tracking-[0.3em] uppercase text-[var(--butter)] font-bold mb-5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  Fra indholdet
                 </h4>
-                <ul className="space-y-3.5">
-                  {footerArticles.map((article) => (
-                    <li key={article.href}>
+                <ul className="space-y-2.5">
+                  {footerArticles.map((article, idx) => (
+                    <li key={article.href} className="flex items-baseline gap-3">
+                      <span className="text-[0.7rem] text-[var(--ember)] font-mono">
+                        {String(idx + 1).padStart(2, "0")}
+                      </span>
                       <Link
                         href={article.href}
-                        className="text-sm text-stone-500 hover:text-[var(--ember)] transition-colors no-underline"
+                        className="text-sm text-[var(--smoke)] hover:text-[var(--butter)] transition-colors no-underline"
                       >
                         {article.label}
                       </Link>
@@ -211,51 +220,42 @@ export default function RootLayout({
                 </ul>
               </div>
 
-              {/* Categories */}
-              <div>
-                <h4 className="text-stone-300 font-bold mb-5 text-xs uppercase tracking-[0.2em]" style={{ fontFamily: "'Outfit', sans-serif" }}>
-                  Kategorier
+              <div className="md:col-span-3">
+                <h4 className="text-[0.65rem] tracking-[0.3em] uppercase text-[var(--butter)] font-bold mb-5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  Sektioner
                 </h4>
-                <ul className="space-y-3.5 text-sm">
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--ember)]" />
-                    Guides &amp; Teknik
+                <ul className="space-y-2.5 text-sm">
+                  <li className="flex items-center gap-3">
+                    <span className="w-2 h-2 rotate-45 bg-[var(--ember)]" />
+                    <span>Guides &amp; teknik</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)]" />
-                    Opskrifter
+                  <li className="flex items-center gap-3">
+                    <span className="w-2 h-2 rotate-45 bg-[var(--saffron)]" />
+                    <span>Opskrifter</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--copper)]" />
-                    Vedligeholdelse
+                  <li className="flex items-center gap-3">
+                    <span className="w-2 h-2 rotate-45 bg-[var(--wine-light)]" />
+                    <span>Vedligeholdelse</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--flame)]" />
-                    Anmeldelser
+                  <li className="flex items-center gap-3">
+                    <span className="w-2 h-2 rotate-45 bg-[var(--butter)]" />
+                    <span>Anmeldelser</span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            {/* Network + copyright */}
-            <div className="mt-16 pt-8 border-t border-white/5">
-              <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-xs text-stone-600">
-                  Del af{" "}
-                  <a
-                    href="https://lexhub.dk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[var(--ember)] hover:text-white transition-colors no-underline"
-                  >
-                    LexHub.dk
-                  </a>
-                  -netværket
-                </p>
-                <p className="text-xs text-stone-600">
-                  &copy; {new Date().getFullYear()} Grillbogen.dk
-                </p>
-              </div>
+            <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3">
+              <p className="text-[0.7rem] tracking-[0.18em] uppercase text-[var(--ash)]">
+                Del af{" "}
+                <a href="https://lexhub.dk" target="_blank" rel="noopener noreferrer" className="text-[var(--ember)] hover:text-[var(--butter)] transition-colors no-underline">
+                  LexHub.dk
+                </a>
+                -netværket
+              </p>
+              <p className="text-[0.7rem] tracking-[0.18em] uppercase text-[var(--ash)]">
+                &copy; {new Date().getFullYear()} Grillbogen.dk
+              </p>
             </div>
           </div>
         </footer>

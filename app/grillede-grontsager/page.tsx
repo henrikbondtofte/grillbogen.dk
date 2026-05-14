@@ -63,7 +63,7 @@ export default function GrilledeGrontsager() {
             <span className="category-badge">Teknik</span>
             <div className="h-px w-8 bg-[var(--ember)]/50" />
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Outfit', sans-serif" }}>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>
             Grillede Grøntsager
           </h1>
         </div>

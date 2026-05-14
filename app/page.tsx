@@ -4,251 +4,437 @@ import Image from "next/image";
 const articles = [
   {
     slug: "fuldstaendig-guide-til-gasgrill",
-    title: "Fuldstændig Guide til Gasgrill",
+    title: "Fuldstændig guide til gasgrill",
     excerpt:
       "Alt du skal vide om gasgrill - fra valg og tænding til temperaturzoner og vedligeholdelse.",
-    category: "Guides",
+    category: "Guide",
     image:
-      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=900&h=700&fit=crop",
     imageCredit: "Lily Banse",
   },
   {
     slug: "kulgrill-vs-gasgrill",
-    title: "Kulgrill eller Gasgrill?",
+    title: "Kulgrill eller gasgrill?",
     excerpt:
-      "Den store sammenligning: Smag, pris, bekvemmelighed og vedligeholdelse. Hvad passer bedst til dig?",
-    category: "Guides",
+      "Den store sammenligning: smag, pris, bekvemmelighed og vedligeholdelse. Hvad passer bedst til dig?",
+    category: "Guide",
     image:
-      "https://images.unsplash.com/photo-1529193591184-b1d58069ecf0?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1529193591184-b1d58069ecf0?w=900&h=700&fit=crop",
     imageCredit: "Evan Wise",
   },
   {
     slug: "perfekte-ribeye",
-    title: "Den Perfekte Ribeye Steak",
+    title: "Den perfekte ribeye steak",
     excerpt:
-      "Step-by-step: Reverse sear, kernetemperaturer og de tricks der gør forskellen mellem godt og fantastisk.",
-    category: "Opskrifter",
+      "Reverse sear, kernetemperaturer og de tricks der gør forskellen mellem godt og fantastisk.",
+    category: "Opskrift",
     image:
-      "https://images.unsplash.com/photo-1558030006-450675393462?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1558030006-450675393462?w=900&h=700&fit=crop",
     imageCredit: "Emerson Vieira",
   },
   {
     slug: "pulled-pork-paa-grillen",
-    title: "Pulled Pork på Grillen",
+    title: "Pulled pork på grillen",
     excerpt:
-      "Low and slow er nøgleordet. Lær at lave mørt, saftigt pulled pork med røgsmag direkte på din grill.",
-    category: "Opskrifter",
+      "Low and slow er nøgleordet. Mørt, saftigt pulled pork med ægte røgsmag direkte på din grill.",
+    category: "Opskrift",
     image:
-      "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1544025162-d76694265947?w=900&h=700&fit=crop",
     imageCredit: "Sander Dalhuisen",
   },
   {
     slug: "grill-for-begyndere",
-    title: "Grill for Begyndere",
+    title: "Grill for begyndere",
     excerpt:
       "Første gang med grillen? Her er alt du skal vide for at komme godt i gang - uden stress.",
-    category: "Guides",
+    category: "Guide",
     image:
-      "https://images.unsplash.com/photo-1504564321926-4bd1b3929d93?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1504564321926-4bd1b3929d93?w=900&h=700&fit=crop",
     imageCredit: "Vincent Keiman",
   },
   {
     slug: "is-dessert-efter-grillen",
-    title: "Is som Dessert efter Grillen",
+    title: "Is som dessert efter grillen",
     excerpt:
-      "Den perfekte afslutning på en grillaften. Fra grillede frugter med flødeis til is-bar for mange gæster.",
+      "Den perfekte afslutning. Fra grillede frugter med flødeis til is-bar for mange gæster.",
     category: "Dessert",
     image:
-      "https://images.unsplash.com/photo-1528344227352-9a704db46536?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1528344227352-9a704db46536?w=900&h=700&fit=crop",
     imageCredit: "Dale Gray",
   },
   {
     slug: "grillede-grontsager",
-    title: "Grillede Grøntsager",
+    title: "Grillede grøntsager",
     excerpt:
-      "Komplet guide til grøntsager på grillen. Temperaturer, tider og teknikker til peberfrugter, squash, majs og meget mere.",
+      "Temperaturer, tider og teknikker til peberfrugter, squash, majs og meget mere.",
     category: "Teknik",
     image:
-      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
-    imageCredit: "Lily Banse",
+      "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=900&h=700&fit=crop",
+    imageCredit: "Dane Deaner",
   },
   {
     slug: "rengoering-af-grill",
-    title: "Rengøring af Grill",
+    title: "Rengøring af grill",
     excerpt:
-      "Hold din grill i topform. Vedligeholdelse efter hver brug, sæsonrengøring, rustfjernelse og opbevaring.",
-    category: "Vedligeholdelse",
+      "Hold din grill i topform. Vedligeholdelse efter hver brug, sæsonrengøring og opbevaring.",
+    category: "Vedligehold",
     image:
-      "https://images.unsplash.com/photo-1529193591184-b1d58069ecf0?w=600&h=400&fit=crop",
-    imageCredit: "Evan Wise",
+      "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=900&h=700&fit=crop",
+    imageCredit: "Stephen Andrews",
   },
   {
     slug: "marinader-til-grill",
-    title: "Marinader til Grill",
+    title: "Marinader til grill",
     excerpt:
-      "8 gennemtestede marinader fra klassisk BBQ til koreansk bulgogi. Plus teknikken bag en god marinade.",
-    category: "Opskrifter",
+      "8 gennemtestede marinader fra klassisk BBQ til koreansk bulgogi. Plus teknikken bag.",
+    category: "Opskrift",
     image:
-      "https://images.unsplash.com/photo-1558030006-450675393462?w=600&h=400&fit=crop",
-    imageCredit: "Emerson Vieira",
+      "https://images.unsplash.com/photo-1611171711912-e3f6b536f532?w=900&h=700&fit=crop",
+    imageCredit: "Z Grills",
   },
 ];
+
+const featured = articles[2]; // ribeye
+const secondary = [articles[0], articles[3]]; // gasgrill + pulled pork
+const restOfList = articles.filter(
+  (a) => a.slug !== featured.slug && !secondary.find((s) => s.slug === a.slug)
+);
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section - Full dramatic smokehouse feel */}
-      <section className="relative bg-[var(--obsidian)] overflow-hidden grain-texture">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1400&h=600&fit=crop"
-            alt="Saftige steaks på en varm grill"
-            fill
-            className="object-cover opacity-30"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--obsidian)] via-[var(--obsidian)]/70 to-[var(--obsidian)]/40" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--obsidian)] via-transparent to-[var(--obsidian)]/60" />
-        </div>
+      {/* ============== MAGAZINE COVER HERO ============== */}
+      <section className="relative bg-[var(--paper)] border-b border-[var(--paper-edge)] overflow-hidden">
+        <div className="absolute inset-0 paper-grain pointer-events-none" />
+        <div className="relative max-w-6xl mx-auto px-4 pt-16 pb-12 md:pt-20 md:pb-16">
+          <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-center">
+            {/* LEFT: Cover masthead */}
+            <div className="md:col-span-7 relative z-10">
+              <div className="flex items-center gap-4 mb-8">
+                <span className="kicker">Vol. 01 · Forår 2026</span>
+              </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 py-28 md:py-40">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="h-px w-12 bg-gradient-to-r from-[var(--ember)] to-transparent" />
-              <span className="text-xs font-bold text-[var(--ember)] uppercase tracking-[0.25em]">
-                Danmarks Grillguide
-              </span>
-            </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-[0.95] tracking-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-              Mestre grillen.
-              <br />
-              <span className="bg-gradient-to-r from-[var(--ember)] via-[var(--gold)] to-[var(--ember)] bg-clip-text text-transparent">
-                Hver eneste gang.
-              </span>
-            </h1>
-            <p className="text-lg md:text-xl text-stone-400 mb-10 leading-relaxed max-w-xl">
-              Guides, opskrifter og teknikker til dig der vil have mere ud af
-              din grill. Uanset om du er helt grøn eller erfaren grillmester.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/grill-for-begyndere"
-                className="bg-gradient-to-r from-[var(--ember)] to-[var(--copper)] hover:from-[var(--copper)] hover:to-[var(--ember)] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-900/25 hover:shadow-orange-900/40 no-underline text-sm uppercase tracking-wider"
+              <h1
+                className="display text-[3.2rem] sm:text-[4.2rem] md:text-[5.5rem] lg:text-[6.4rem] text-[var(--ink)] mb-6"
+                style={{ fontFamily: "'Fraunces', Georgia, serif" }}
               >
-                Start her
-              </Link>
-              <Link
-                href="/perfekte-ribeye"
-                className="bg-white/5 hover:bg-white/10 text-stone-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all no-underline border border-white/10 hover:border-white/20 text-sm uppercase tracking-wider"
-              >
-                Se opskrifter
-              </Link>
+                Røg,
+                <br />
+                <em>glød</em>
+                <br />
+                &amp; håndværk.
+              </h1>
+
+              <p className="text-lg md:text-xl text-[var(--char)] leading-relaxed max-w-xl mb-10">
+                Et redaktionelt grillmagasin om den ærlige varme: testede
+                opskrifter, konkrete teknikker og udstyr der holder. Skrevet til
+                dig der står ved grillen - ikke til algoritmen.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4">
+                <Link
+                  href="/grill-for-begyndere"
+                  className="bg-[var(--wine)] hover:bg-[var(--wine-deep)] text-[var(--paper)] font-semibold px-7 py-3.5 transition-all no-underline text-[0.78rem] tracking-[0.22em] uppercase shadow-[5px_5px_0_var(--ink)] hover:shadow-[7px_7px_0_var(--ink)] hover:-translate-y-0.5"
+                >
+                  Start her →
+                </Link>
+                <Link
+                  href="/perfekte-ribeye"
+                  className="text-[var(--ink)] hover:text-[var(--wine)] font-medium px-1 py-3.5 transition-colors no-underline text-[0.85rem] underline underline-offset-4 decoration-[var(--paper-edge)] hover:decoration-[var(--wine)]"
+                  style={{ fontFamily: "'Fraunces', Georgia, serif", fontStyle: "italic" }}
+                >
+                  Bladr i opskrifterne
+                </Link>
+              </div>
+
+              <div className="flex items-center gap-6 mt-12 pt-6 border-t border-[var(--paper-edge)] max-w-xl">
+                <div>
+                  <div className="text-2xl font-bold text-[var(--wine)]" style={{ fontFamily: "'Fraunces', Georgia, serif" }}>
+                    09
+                  </div>
+                  <div className="text-[0.65rem] tracking-[0.25em] uppercase text-[var(--ash)] mt-1">
+                    artikler
+                  </div>
+                </div>
+                <div className="w-px h-8 bg-[var(--paper-edge)]" />
+                <div>
+                  <div className="text-2xl font-bold text-[var(--wine)]" style={{ fontFamily: "'Fraunces', Georgia, serif" }}>
+                    4
+                  </div>
+                  <div className="text-[0.65rem] tracking-[0.25em] uppercase text-[var(--ash)] mt-1">
+                    sektioner
+                  </div>
+                </div>
+                <div className="w-px h-8 bg-[var(--paper-edge)]" />
+                <div>
+                  <div className="text-2xl font-bold text-[var(--wine)]" style={{ fontFamily: "'Fraunces', Georgia, serif" }}>
+                    0
+                  </div>
+                  <div className="text-[0.65rem] tracking-[0.25em] uppercase text-[var(--ash)] mt-1">
+                    reklamer
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[var(--parchment)] to-transparent" />
-      </section>
-
-      {/* Intro Section */}
-      <section className="max-w-4xl mx-auto px-4 pt-8 pb-16">
-        <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-stone-100">
-          <div className="absolute -top-4 left-8">
-            <span className="bg-[var(--charcoal)] text-[var(--sand)] text-xs font-bold px-4 py-2 rounded-lg uppercase tracking-wider" style={{ fontFamily: "'Outfit', sans-serif" }}>
-              Velkommen
-            </span>
-          </div>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--charcoal)] mb-5 mt-2" style={{ fontFamily: "'Outfit', sans-serif" }}>
-            Velkommen til Grillbogen
-          </h2>
-          <p className="text-lg text-stone-600 leading-relaxed mb-4">
-            Grillbogen.dk er for dig der elsker at stå ved grillen. Her finder du
-            ingen lange forklaringer om ting du allerede ved - bare konkrete
-            guides, testede opskrifter og ærlige tips der faktisk virker.
-          </p>
-          <p className="text-lg text-stone-600 leading-relaxed">
-            Vi dækker alt fra valg af grill og grundlæggende teknikker til
-            avanceret smoking og pulled pork. Klar til at tænde op?
-          </p>
-        </div>
-      </section>
-
-      {/* Articles Grid */}
-      <section className="max-w-6xl mx-auto px-4 pb-24">
-        <div className="flex items-center gap-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[var(--charcoal)] whitespace-nowrap" style={{ fontFamily: "'Outfit', sans-serif" }}>
-            Populære Guides
-          </h2>
-          <div className="hidden md:block h-px flex-1 bg-gradient-to-r from-stone-200 to-transparent" />
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article) => (
-            <Link
-              key={article.slug}
-              href={`/${article.slug}`}
-              className="article-card group bg-white rounded-2xl overflow-hidden no-underline"
-            >
-              <div className="relative h-52 overflow-hidden">
+            {/* RIGHT: Cover image plate */}
+            <div className="md:col-span-5 relative">
+              <div className="relative aspect-[3/4] bg-[var(--ink)] overflow-hidden shadow-[12px_14px_0_var(--paper-edge)]">
                 <Image
-                  src={article.image}
-                  alt={article.title}
+                  src="https://images.unsplash.com/photo-1558030006-450675393462?w=900&h=1200&fit=crop"
+                  alt="Saftig ribeye på grillen"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute top-4 left-4">
-                  <span className="category-badge">
-                    {article.category}
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--ink)]/85 via-transparent to-transparent" />
+                <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
+                  <span className="kicker light" style={{ color: "var(--butter)" }}>
+                    Forsiden
+                  </span>
+                  <span className="text-[var(--butter)] text-[0.7rem] tracking-[0.25em] uppercase font-bold">
+                    Nr. 03
                   </span>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-[var(--charcoal)] mb-2.5 group-hover:text-[var(--ember)] transition-colors leading-snug" style={{ fontFamily: "'Outfit', sans-serif" }}>
-                  {article.title}
-                </h3>
-                <p className="text-sm text-stone-500 leading-relaxed">
-                  {article.excerpt}
-                </p>
-                <div className="mt-4 flex items-center gap-2 text-xs font-semibold text-[var(--ember)] opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span>Læs mere</span>
-                  <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                  </svg>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="text-[var(--butter)] text-[0.65rem] tracking-[0.3em] uppercase font-bold mb-2 block">
+                    Månedens opskrift
+                  </span>
+                  <h2
+                    className="text-[var(--paper)] text-2xl md:text-3xl leading-[1.05]"
+                    style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700 }}
+                  >
+                    Den perfekte <em className="font-normal text-[var(--butter)]">ribeye</em>
+                  </h2>
+                  <Link
+                    href="/perfekte-ribeye"
+                    className="inline-flex items-center gap-2 mt-4 text-[var(--butter)] hover:text-[var(--ember)] no-underline text-[0.75rem] tracking-[0.2em] uppercase font-bold transition-colors"
+                  >
+                    Læs opskriften
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
-            </Link>
-          ))}
+              {/* Decorative stamp */}
+              <div className="absolute -top-5 -left-5 w-24 h-24 rounded-full border-2 border-[var(--wine)] flex items-center justify-center bg-[var(--paper)] rotate-[-12deg] hidden md:flex">
+                <div className="text-center">
+                  <div
+                    className="text-[var(--wine)] text-[0.55rem] tracking-[0.3em] uppercase font-bold"
+                  >
+                    Smag
+                    <br />
+                    først
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom rule */}
+        <div className="flame-divider max-w-6xl mx-auto px-4">
+          <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M14 0c2 4-2 6-2 10 0 2.5 1.8 3.5 1.8 5.5 0 1-.5 2-1.8 2.5 1-3.8-2.8-3.8-2.8-7.6C9.2 7 13 5 14 0z" fill="var(--ember)"/>
+          </svg>
         </div>
       </section>
 
-      {/* CTA Section - Warm smokehouse */}
-      <section className="relative bg-[var(--charcoal)] overflow-hidden grain-texture">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: "radial-gradient(circle at 20% 50%, var(--ember) 0%, transparent 50%), radial-gradient(circle at 80% 50%, var(--gold) 0%, transparent 50%)"
-          }} />
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 py-20 text-center">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <div className="h-px w-8 bg-[var(--ember)]" />
-            <span className="text-xs font-bold text-[var(--ember)] uppercase tracking-[0.2em]">Kom i gang</span>
-            <div className="h-px w-8 bg-[var(--ember)]" />
+      {/* ============== EDITOR'S NOTE ============== */}
+      <section className="max-w-3xl mx-auto px-4 py-16 md:py-20 text-center">
+        <span className="kicker mx-auto justify-center">Redaktørens hilsen</span>
+        <h2
+          className="display text-3xl md:text-5xl text-[var(--ink)] mt-6 mb-6"
+        >
+          Velkommen til <em>Grillbogen</em>
+        </h2>
+        <p className="text-lg text-[var(--char)] leading-relaxed mb-4">
+          Det her er for dig der elsker at stå ved grillen. Ingen lange
+          forklaringer om ting du allerede ved - bare konkrete guides, testede
+          opskrifter og ærlige tips der faktisk virker.
+        </p>
+        <p className="text-lg text-[var(--char)] leading-relaxed">
+          Vi dækker alt fra valg af grill og grundlæggende teknikker til
+          avanceret smoking og pulled pork.
+        </p>
+      </section>
+
+      {/* ============== FEATURED + SECONDARY ============== */}
+      <section className="max-w-6xl mx-auto px-4 pb-16">
+        <div className="flex items-end justify-between mb-10 border-b border-[var(--paper-edge)] pb-4">
+          <div>
+            <span className="kicker">I dette nummer</span>
+            <h2 className="display text-4xl md:text-5xl text-[var(--ink)] mt-3">
+              Anbefalede læsninger
+            </h2>
           </div>
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-5" style={{ fontFamily: "'Outfit', sans-serif" }}>
-            Klar til at tænde grillen?
+          <span className="hidden md:inline issue-number">side 12-32</span>
+        </div>
+
+        <div className="grid md:grid-cols-12 gap-6 md:gap-8">
+          {/* Featured */}
+          <Link
+            href={`/${featured.slug}`}
+            className="issue-card md:col-span-7 group no-underline"
+          >
+            <div className="photo relative aspect-[4/3]">
+              <Image
+                src={featured.image}
+                alt={featured.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 60vw"
+              />
+              <div className="absolute top-4 left-4">
+                <span className="category-badge">{featured.category}</span>
+              </div>
+              <div className="absolute top-4 right-4 text-[var(--paper)] text-[0.7rem] tracking-[0.25em] uppercase font-bold drop-shadow">
+                Anbefalet
+              </div>
+            </div>
+            <div className="p-7 md:p-9">
+              <span className="issue-number">Nr. 03</span>
+              <h3
+                className="text-3xl md:text-[2.4rem] leading-[1.05] text-[var(--ink)] group-hover:text-[var(--wine)] transition-colors mt-2"
+                style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: "-0.02em" }}
+              >
+                {featured.title}
+              </h3>
+              <p className="text-[var(--char)] mt-4 leading-relaxed">
+                {featured.excerpt}
+              </p>
+              <div className="flex items-center gap-2 mt-5 text-[var(--wine)] text-[0.75rem] tracking-[0.22em] uppercase font-bold">
+                Læs opskriften
+                <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </Link>
+
+          {/* Secondary stack */}
+          <div className="md:col-span-5 flex flex-col gap-6 md:gap-8">
+            {secondary.map((article, idx) => (
+              <Link
+                key={article.slug}
+                href={`/${article.slug}`}
+                className="issue-card group no-underline flex-1 flex flex-col"
+              >
+                <div className="photo relative aspect-[16/10]">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="category-badge">{article.category}</span>
+                  </div>
+                </div>
+                <div className="p-6 flex-1 flex flex-col">
+                  <span className="issue-number">Nr. 0{idx + 4}</span>
+                  <h3
+                    className="text-xl md:text-2xl leading-[1.1] text-[var(--ink)] group-hover:text-[var(--wine)] transition-colors mt-1.5"
+                    style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: "-0.02em" }}
+                  >
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-[var(--char)] mt-2.5 leading-relaxed">
+                    {article.excerpt}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============== TOC / ALL ARTICLES ============== */}
+      <section className="bg-[var(--paper-soft)] border-y border-[var(--paper-edge)] relative overflow-hidden">
+        <div className="absolute inset-0 paper-grain pointer-events-none" />
+        <div className="relative max-w-6xl mx-auto px-4 py-20">
+          <div className="grid md:grid-cols-12 gap-10 mb-12">
+            <div className="md:col-span-5">
+              <span className="kicker">Indholdsfortegnelse</span>
+              <h2 className="display text-4xl md:text-5xl text-[var(--ink)] mt-4">
+                Hele <em>kataloget</em>
+              </h2>
+              <p className="text-[var(--char)] mt-5 max-w-md">
+                Bladr i samlingen af guides, opskrifter og teknikker. Hver
+                artikel er testet på rigtig glød - ikke bare research bag et
+                tastatur.
+              </p>
+            </div>
+            <div className="md:col-span-7 md:pl-8 md:border-l border-[var(--paper-edge)]">
+              <ul className="divide-y divide-[var(--paper-edge)]">
+                {restOfList.map((article, idx) => (
+                  <li key={article.slug}>
+                    <Link
+                      href={`/${article.slug}`}
+                      className="flex items-start gap-5 py-5 group no-underline"
+                    >
+                      <span
+                        className="text-2xl text-[var(--wine)] font-bold w-12 flex-shrink-0"
+                        style={{ fontFamily: "'Fraunces', Georgia, serif", letterSpacing: "-0.02em" }}
+                      >
+                        {String(idx + 4).padStart(2, "0")}
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-baseline gap-3 mb-1">
+                          <span className="text-[0.6rem] tracking-[0.3em] uppercase text-[var(--ash)] font-bold">
+                            {article.category}
+                          </span>
+                          <span className="flex-1 border-b border-dotted border-[var(--paper-edge)] mb-1.5" />
+                        </div>
+                        <h3
+                          className="text-xl md:text-[1.4rem] text-[var(--ink)] group-hover:text-[var(--wine)] transition-colors leading-tight"
+                          style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: "-0.02em" }}
+                        >
+                          {article.title}
+                        </h3>
+                        <p className="text-sm text-[var(--ash)] mt-1 leading-relaxed">
+                          {article.excerpt}
+                        </p>
+                      </div>
+                      <span className="text-[var(--wine)] opacity-0 group-hover:opacity-100 transition-opacity pt-1.5">
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============== CTA - DARK SMOKEHOUSE FINALE ============== */}
+      <section className="relative bg-[var(--ink)] overflow-hidden">
+        <div className="absolute inset-0 grain-texture" />
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: "radial-gradient(ellipse at 30% 50%, var(--ember) 0%, transparent 55%), radial-gradient(ellipse at 80% 60%, var(--saffron) 0%, transparent 50%)"
+        }} />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 py-24 text-center">
+          <span className="kicker light mx-auto justify-center">Sidste side</span>
+          <h2
+            className="display text-4xl md:text-6xl text-[var(--paper)] mt-6 mb-6"
+          >
+            Klar til at <em className="text-[var(--saffron)]">tænde op?</em>
           </h2>
-          <p className="text-lg text-stone-400 mb-10 max-w-xl mx-auto leading-relaxed">
-            Start med vores begynderguide og bliv den grillmester du altid har
-            drømt om at være.
+          <p className="text-lg text-[var(--smoke)] mb-10 max-w-xl mx-auto leading-relaxed">
+            Start med begynderguiden, lær teknikkerne, og find din egen rytme
+            ved grillen. En bid ad gangen.
           </p>
           <Link
             href="/grill-for-begyndere"
-            className="inline-block bg-gradient-to-r from-[var(--ember)] to-[var(--copper)] text-white font-bold px-10 py-4 rounded-xl hover:from-[var(--copper)] hover:to-[var(--ember)] transition-all shadow-lg shadow-orange-900/25 no-underline text-sm uppercase tracking-wider"
+            className="inline-block bg-[var(--ember)] hover:bg-[var(--saffron)] text-[var(--ink)] font-bold px-10 py-4 transition-all no-underline text-[0.78rem] tracking-[0.22em] uppercase shadow-[6px_6px_0_var(--wine)] hover:shadow-[8px_8px_0_var(--wine-deep)] hover:-translate-y-0.5"
           >
-            Læs begynderguiden
+            Læs begynderguiden →
           </Link>
         </div>
       </section>

@@ -63,7 +63,7 @@ export default function GrillForBegyndere() {
             <span className="category-badge">Guides</span>
             <div className="h-px w-8 bg-[var(--ember)]/50" />
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Outfit', sans-serif" }}>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95]" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>
             Grill for Begyndere
           </h1>
         </div>
@@ -117,7 +117,7 @@ export default function GrillForBegyndere() {
           </p>
 
           <div className="bg-white rounded-2xl p-7 my-8 shadow-sm border border-stone-100">
-            <h3 className="text-[var(--charcoal)] mt-0 border-0 !mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>Starter-kit (under 500 kr)</h3>
+            <h3 className="text-[var(--charcoal)] mt-0 border-0 !mb-4" style={{ fontFamily: "'Fraunces', Georgia, serif", fontWeight: 700, letterSpacing: '-0.025em' }}>Starter-kit (under 500 kr)</h3>
             <ol>
               <li><strong>Grilltang</strong> - Lang, med fjedrende greb. Dit vigtigste redskab.</li>
               <li><strong>Stegetermometer</strong> - Digital, instant-read. Stop med at gætte.</li>
