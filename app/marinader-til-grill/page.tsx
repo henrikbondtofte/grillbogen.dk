@@ -171,6 +171,19 @@ export default function MarinaderTilGrill() {
             <strong>Fisk og skaldyr:</strong> Mariner ALDRIG fisk i mere end 45 minutter i syrlig marinade. Syren &quot;koger&quot; proteinet (det er sådan ceviche laves), og du ender med en konsistens der minder om kogt fisk i stedet for grillet. Kort og intenst er vejen med fisk.
           </div>
 
+          <div className="relative rounded-2xl overflow-hidden my-10">
+            <div className="relative h-72 md:h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=450&fit=crop"
+                alt="Kødstykker marineres i krydret olie og urter inden grillning"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@dalhuijsen" target="_blank" rel="noopener noreferrer">Sander Dalhuisen</a> / Unsplash</p>
+          </div>
+
           <h2>8 marinader der dækker alt</h2>
           <p>
             Hver opskrift giver nok til ca. 1 kg kød. Bland alle ingredienser i en skål, hæld over kødet i en pose eller beholder, og stil i køleskabet.
@@ -332,6 +345,21 @@ export default function MarinaderTilGrill() {
             <li><strong>Sukker ved høj varme.</strong> Marinader med honning, sukker eller sirup brænder let over direkte varme. Brug medium varme eller tilføj sukkerkomponenten først de sidste 10 minutter.</li>
             <li><strong>Marinering i metal.</strong> Syrlige marinader reagerer med aluminium og reaktivt metal. Brug glas, plastik eller emaljeret stål.</li>
           </ul>
+
+          {/* YouTube video */}
+          <h2>Se teknikken</h2>
+          <p>
+            Traeger Grill Danmark gennemgår forskellen på rubs og BBQ-saucer - hvornår du bruger hvad, og hvordan du kombinerer dem med en god marinade:
+          </p>
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/icHyLIHYRTU"
+              title="Grillguide - Rubs og BBQ-saucer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="image-credit">Video: Traeger Grill Danmark (YouTube)</p>
 
           <h2>Læs videre</h2>
           <ul>

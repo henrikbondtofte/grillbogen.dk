@@ -90,6 +90,19 @@ export default function GrilledeGrontsager() {
             Resultatet er grøntsager med en kompleksitet der overrasker de fleste. Peberfrugter bliver søde og røgede. Squash får en nøddeagtig dybde. Løg transformeres fra skarpe til nærmest marmeladeagtige. Og majs? Majs på grillen er en helt anden oplevelse end kogt majs.
           </p>
 
+          <div className="relative rounded-2xl overflow-hidden my-10">
+            <div className="relative h-72 md:h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&h=450&fit=crop"
+                alt="Forskellige farverige grøntsager skåret klar til grillen"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@danedeaner" target="_blank" rel="noopener noreferrer">Dane Deaner</a> / Unsplash</p>
+          </div>
+
           <h2>De gyldne regler</h2>
           <p>
             Uanset hvilke grøntsager du griller, gælder disse principper:
@@ -276,6 +289,21 @@ export default function GrilledeGrontsager() {
             <li><strong>Lang pensel:</strong> Til at oliere grøntsagerne direkte på risten.</li>
             <li><strong>Metalspyd:</strong> Genanvendelige, holder varmen, ingen iblødsætning. Flade spyd er bedst - runde lader maden dreje.</li>
           </ul>
+
+          {/* YouTube video */}
+          <h2>Se teknikken</h2>
+          <p>
+            Fyldte peberfrugter i baconsvøb er klassisk grøntsagsgrillning. Traeger Grill Danmark viser teknikken trin for trin - oplagt inspiration til både tilbehør og hovedret:
+          </p>
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/2wuHbWQOdjw"
+              title="Grillopskrift - Fyldte peberfrugter i baconsvøb"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="image-credit">Video: Traeger Grill Danmark (YouTube)</p>
 
           <h2>Læs videre</h2>
           <ul>

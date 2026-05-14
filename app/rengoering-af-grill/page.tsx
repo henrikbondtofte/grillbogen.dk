@@ -119,6 +119,19 @@ export default function RengoeringAfGrill() {
             <strong>Rutine:</strong> Brænd af mens du spiser. Børst risten når du rydder op. Det tager under 5 minutter og holder grillen i form hele sæsonen.
           </div>
 
+          <div className="relative rounded-2xl overflow-hidden my-10">
+            <div className="relative h-72 md:h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&h=450&fit=crop"
+                alt="Rist på grill der rengøres med stålbørste"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@stephenandrews" target="_blank" rel="noopener noreferrer">Stephen Andrews</a> / Unsplash</p>
+          </div>
+
           <h2>Den store rengøring (sæsonstart og -slut)</h2>
           <p>
             To gange om året - når du åbner sæsonen om foråret og lukker den om efteråret - fortjener grillen en grundig gennemgang. Sæt 45-60 minutter af. Det er det værd.
@@ -241,6 +254,21 @@ export default function RengoeringAfGrill() {
             <li><strong>Specialrengøring til grill:</strong> Virker godt til ekstreme tilfælde, men er sjældent nødvendigt hvis du vedligeholder løbende. Skyl ALTID grundigt efter - du vil ikke have kemikalier på din rist.</li>
             <li><strong>Ovnrens:</strong> Effektivt men aggressivt. Kun til riste og dele der kan skylles grundigt. Brug ALDRIG på coatede overflader eller indersiden af grillen.</li>
           </ul>
+
+          {/* YouTube video */}
+          <h2>Se vedligehold i praksis</h2>
+          <p>
+            Traeger Grill Danmark gennemgår de vedligeholdelsesprodukter der gør forskellen - fra rengøringsmidler til imprægnering af de dele der får hårdest slid:
+          </p>
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/cn0FolM2BRE"
+              title="Grillguide: Traeger vedligeholdelsesprodukter"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="image-credit">Video: Traeger Grill Danmark (YouTube)</p>
 
           <h2>Læs videre</h2>
           <ul>
