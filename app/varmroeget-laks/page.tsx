@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Varmrøget Laks på Grillen - Komplet Guide (2026)",
   description:
     "Sådan laver du varmrøget laks på din egen grill. Saltlage, røgtræ, temperaturer og timing. Saftig, røgfyldt laks der overgår alt det dyre i køledisken.",
+  alternates: {
+    canonical: "/varmroeget-laks",
+  },
   openGraph: {
     title: "Varmrøget Laks på Grillen",
     description:

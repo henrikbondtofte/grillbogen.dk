@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Den Perfekte Ribeye Steak på Grillen (2026)",
   description:
     "Step-by-step guide til at grille den perfekte ribeye. Reverse sear teknik, kernetemperaturer, krydring og de tricks der gør forskellen.",
+  alternates: {
+    canonical: "/perfekte-ribeye",
+  },
   openGraph: {
     title: "Den Perfekte Ribeye Steak på Grillen",
     description:

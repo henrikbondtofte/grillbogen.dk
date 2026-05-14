@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Grillede Grøntsager - Perfekte Grøntsager på Grillen (2026)",
   description:
     "Lær at grille grøntsager korrekt. Temperaturer, tider og teknikker til peberfrugter, squash, majs, aubergine og meget mere.",
+  alternates: {
+    canonical: "/grillede-grontsager",
+  },
   openGraph: {
     title: "Grillede Grøntsager - Perfekte Grøntsager på Grillen",
     description:

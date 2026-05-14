@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Grill for Begyndere - Alt Du Skal Vide (2026)",
   description:
     "Komplet begynderguide til grill. Lær at vælge grill, tænde korrekt, styre temperaturen og lave din første perfekte grillmiddag.",
+  alternates: {
+    canonical: "/grill-for-begyndere",
+  },
   openGraph: {
     title: "Grill for Begyndere - Alt Du Skal Vide",
     description:

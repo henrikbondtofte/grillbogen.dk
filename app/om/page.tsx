@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Om Grillbogen.dk - Danmarks Grillguide",
   description:
     "Lær mere om Grillbogen.dk - Danmarks komplette grillguide med guides, opskrifter og teknikker til alle niveauer.",
+  alternates: {
+    canonical: "/om",
+  },
   openGraph: {
     title: "Om Grillbogen.dk",
     description:

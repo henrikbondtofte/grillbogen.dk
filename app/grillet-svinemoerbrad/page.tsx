@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Grillet Svinemørbrad - Saftig Hver Gang (2026)",
   description:
     "Sådan griller du svinemørbrad uden at tørre den ud. Marinade, kernetemperatur, hviletid og teknikken med direkte/indirekte varme. Mørt, saftigt resultat hver gang.",
+  alternates: {
+    canonical: "/grillet-svinemoerbrad",
+  },
   openGraph: {
     title: "Grillet Svinemørbrad - Saftig Hver Gang",
     description:

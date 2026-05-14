@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Rengøring af Grill - Komplet Guide til Ren Grill (2026)",
   description:
     "Lær at rengøre din grill korrekt. Vedligeholdelse af gasgrill og kulgrill, fjernelse af fedt og rust, sæsonopbevaring og de bedste rengøringsmidler.",
+  alternates: {
+    canonical: "/rengoering-af-grill",
+  },
   openGraph: {
     title: "Rengøring af Grill - Komplet Guide til Ren Grill",
     description:

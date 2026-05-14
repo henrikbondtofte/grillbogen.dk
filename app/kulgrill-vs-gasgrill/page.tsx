@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Kulgrill vs Gasgrill - Hvad Skal Du Vælge? (2026)",
   description:
     "Komplet sammenligning af kulgrill og gasgrill: smag, pris, bekvemmelighed, vedligeholdelse og hvad der passer bedst til dig.",
+  alternates: {
+    canonical: "/kulgrill-vs-gasgrill",
+  },
   openGraph: {
     title: "Kulgrill vs Gasgrill - Hvad Skal Du Vælge?",
     description:

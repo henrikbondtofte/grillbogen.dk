@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Tomahawk Steak på Grillen - Komplet Guide (2026)",
   description:
     "Sådan griller du en tomahawk steak. Reverse sear, krydring, kernetemperaturer og timing for den 5 cm tykke kongebøf. Inklusiv tips til hvile og servering.",
+  alternates: {
+    canonical: "/tomahawk-paa-grillen",
+  },
   openGraph: {
     title: "Tomahawk Steak på Grillen",
     description:

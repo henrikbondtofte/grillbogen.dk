@@ -3,16 +3,31 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://grillbogen.dk"),
   title: {
     default: "Grillbogen.dk - Det danske grilltidsskrift",
     template: "%s | Grillbogen.dk",
   },
   description:
     "Et redaktionelt grillmagasin om røg, glød og håndværk. Guides, opskrifter, teknikker og anmeldelser - fra første tænding til perfekt brisket.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     siteName: "Grillbogen.dk",
     locale: "da_DK",
     type: "website",
+    url: "https://grillbogen.dk",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -20,8 +35,9 @@ const navLinks = [
   { href: "/fuldstaendig-guide-til-gasgrill", label: "Gasgrill" },
   { href: "/kulgrill-vs-gasgrill", label: "Kul vs. gas" },
   { href: "/perfekte-ribeye", label: "Ribeye" },
+  { href: "/tomahawk-paa-grillen", label: "Tomahawk" },
   { href: "/pulled-pork-paa-grillen", label: "Pulled pork" },
-  { href: "/grillede-grontsager", label: "Grøntsager" },
+  { href: "/varmroeget-laks", label: "Røget laks" },
   { href: "/marinader-til-grill", label: "Marinader" },
   { href: "/rengoering-af-grill", label: "Rengøring" },
   { href: "/grill-for-begyndere", label: "Begynder" },
@@ -32,7 +48,10 @@ const footerArticles = [
   { href: "/fuldstaendig-guide-til-gasgrill", label: "Guide til gasgrill" },
   { href: "/kulgrill-vs-gasgrill", label: "Kulgrill vs. gasgrill" },
   { href: "/perfekte-ribeye", label: "Perfekt ribeye" },
+  { href: "/tomahawk-paa-grillen", label: "Tomahawk steak" },
   { href: "/pulled-pork-paa-grillen", label: "Pulled pork" },
+  { href: "/varmroeget-laks", label: "Varmrøget laks" },
+  { href: "/grillet-svinemoerbrad", label: "Svinemørbrad" },
   { href: "/grillede-grontsager", label: "Grillede grøntsager" },
   { href: "/marinader-til-grill", label: "Marinader" },
   { href: "/rengoering-af-grill", label: "Rengøring af grill" },

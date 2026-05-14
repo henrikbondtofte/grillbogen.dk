@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Fuldstændig Guide til Gasgrill (2026)",
   description:
     "Lær alt om gasgrill - valg, tænding, temperaturzoner, teknikker og vedligeholdelse. Komplet guide for begyndere og erfarne grillmestre.",
+  alternates: {
+    canonical: "/fuldstaendig-guide-til-gasgrill",
+  },
   openGraph: {
     title: "Fuldstændig Guide til Gasgrill",
     description:

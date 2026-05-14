@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Marinader til Grill - 8 Opskrifter der Virker (2026)",
   description:
     "De bedste marinader til grill: Klassisk BBQ, asiatisk, chimichurri, jerk og mere. Lær teknikken bag en god marinade og hvor længe kød skal marinere.",
+  alternates: {
+    canonical: "/marinader-til-grill",
+  },
   openGraph: {
     title: "Marinader til Grill - 8 Opskrifter der Virker",
     description:

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Pulled Pork på Grillen - Komplet Guide (2026)",
   description:
     "Lær at lave perfekt pulled pork på din grill. Low and slow teknik, rub opskrift, temperaturguide og tips til mørt, saftigt pulled pork med røgsmag.",
+  alternates: {
+    canonical: "/pulled-pork-paa-grillen",
+  },
   openGraph: {
     title: "Pulled Pork på Grillen - Komplet Guide",
     description:

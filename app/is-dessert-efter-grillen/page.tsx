@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Is som Dessert efter Grillen - Vælg Rigtigt (2026)",
   description:
     "Guide til at servere is som den perfekte afslutning på en grillaften. Fra klassisk flødeis til sæsonens sorbetter og grillede frugter med is.",
+  alternates: {
+    canonical: "/is-dessert-efter-grillen",
+  },
   openGraph: {
     title: "Is som Dessert efter Grillen - Vælg Rigtigt",
     description:
