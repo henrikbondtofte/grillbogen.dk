@@ -92,6 +92,36 @@ const articles = [
       "https://images.unsplash.com/photo-1611171711912-e3f6b536f532?w=900&h=700&fit=crop",
     imageCredit: "Z Grills",
   },
+  {
+    slug: "varmroeget-laks",
+    title: "Varmrøget laks på grillen",
+    excerpt:
+      "Saltlage, røgtræ og kernetemperaturer. Saftig, røgfyldt laks der overgår alt det dyre i køledisken.",
+    category: "Opskrift",
+    image:
+      "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=900&h=700&fit=crop",
+    imageCredit: "Unsplash",
+  },
+  {
+    slug: "grillet-svinemoerbrad",
+    title: "Grillet svinemørbrad",
+    excerpt:
+      "Saftig og rosa hver gang. Marinade, kernetemperatur, hviletid og teknikken med direkte og indirekte varme.",
+    category: "Opskrift",
+    image:
+      "https://images.unsplash.com/photo-1544025162-d76694265947?w=900&h=700&fit=crop",
+    imageCredit: "Sander Dalhuisen",
+  },
+  {
+    slug: "tomahawk-paa-grillen",
+    title: "Tomahawk på grillen",
+    excerpt:
+      "5 cm tyk kongebøf med 30 cm langt ribben. Reverse sear, krydring og hvile - så lykkes den hver gang.",
+    category: "Opskrift",
+    image:
+      "https://images.unsplash.com/photo-1602945072881-75915b0f641f?w=900&h=700&fit=crop",
+    imageCredit: "Amin Hasani",
+  },
 ];
 
 const featured = articles[2]; // ribeye
@@ -150,7 +180,7 @@ export default function Home() {
               <div className="flex items-center gap-6 mt-12 pt-6 border-t border-[var(--paper-edge)] max-w-xl">
                 <div>
                   <div className="text-2xl font-bold text-[var(--wine)]" style={{ fontFamily: "'Fraunces', Georgia, serif" }}>
-                    09
+                    12
                   </div>
                   <div className="text-[0.65rem] tracking-[0.25em] uppercase text-[var(--ash)] mt-1">
                     artikler
