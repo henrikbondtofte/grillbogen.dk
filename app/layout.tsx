@@ -114,6 +114,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <SchemaMarkup />
         {/* Top issue strip */}
         <div className="bg-[var(--ink)] text-[var(--butter)] text-[0.65rem] tracking-[0.3em] uppercase">
           <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
@@ -273,13 +274,11 @@ export default function RootLayout({
                 -netværket
               </p>
               <p className="text-[0.7rem] tracking-[0.18em] uppercase text-[var(--ash)]">
-                &copy; {new Date().getFullYear()} Grillbogen.dk
+                &copy; 2026 Grillbogen.dk
               </p>
             </div>
           </div>
         </footer>
-
-        <SchemaMarkup />
       </body>
     </html>
   );

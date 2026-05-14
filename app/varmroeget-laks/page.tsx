@@ -228,7 +228,7 @@ export default function VarmroegetLaksGuide() {
           <ul>
             <li>Vil du bygge videre på røg-teknikken? Prøv <Link href="/pulled-pork-paa-grillen">pulled pork</Link></li>
             <li>Brug din gasgrill til lige akkurat det her: <Link href="/fuldstaendig-guide-til-gasgrill">gasgrill-guiden</Link></li>
-            <li>Server med <Link href="/grillede-grontsager">grillede grøntsager som tilbehør</Link></li>
+            <li>Servér med <Link href="/grillede-grontsager">grillede grøntsager som tilbehør</Link></li>
             <li>Helt ny til grill? Start med <Link href="/grill-for-begyndere">begynderguiden</Link></li>
           </ul>
         </div>

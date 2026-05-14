@@ -259,7 +259,7 @@ export default function RibeyeGuide() {
             <li>Klar til en større udfordring? Prøv <Link href="/pulled-pork-paa-grillen">pulled pork</Link></li>
             <li>Vil du optimere din gasgrill? Læs <Link href="/fuldstaendig-guide-til-gasgrill">gasgrill-guiden</Link></li>
             <li>Prøv en <Link href="/marinader-til-grill">hjemmelavet marinade til din steak</Link></li>
-            <li>Server med <Link href="/grillede-grontsager">grillede grøntsager som tilbehør</Link></li>
+            <li>Servér med <Link href="/grillede-grontsager">grillede grøntsager som tilbehør</Link></li>
             <li>Helt ny til grill? Start med <Link href="/grill-for-begyndere">begynderguiden</Link></li>
           </ul>
         </div>

@@ -191,7 +191,7 @@ export default function IsDessertEfterGrillen() {
           <ul>
             <li>Brug for en <Link href="/grill-for-begyndere">begynderguide til grillen</Link>?</li>
             <li>Lav en <Link href="/perfekte-ribeye">perfekt ribeye</Link> som hovedret</li>
-            <li>Server med <Link href="/grillede-grontsager">grillede grøntsager</Link> som tilbehør</li>
+            <li>Servér med <Link href="/grillede-grontsager">grillede grøntsager</Link> som tilbehør</li>
             <li>Prøv <Link href="/pulled-pork-paa-grillen">pulled pork</Link> til næste grillselskab</li>
           </ul>
         </div>

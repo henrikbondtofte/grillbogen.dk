@@ -268,7 +268,7 @@ export default function GrilletSvinemoerbradGuide() {
             <li>Vil du udvide marinadekassen? Læs <Link href="/marinader-til-grill">marinader til grill</Link></li>
             <li>Sammenlign teknikker med <Link href="/perfekte-ribeye">den perfekte ribeye</Link></li>
             <li>Prøv en længere udfordring: <Link href="/pulled-pork-paa-grillen">pulled pork på grillen</Link></li>
-            <li>Server med <Link href="/grillede-grontsager">grillede grøntsager</Link></li>
+            <li>Servér med <Link href="/grillede-grontsager">grillede grøntsager</Link></li>
             <li>Helt ny til grill? Start med <Link href="/grill-for-begyndere">begynderguiden</Link></li>
           </ul>
         </div>
