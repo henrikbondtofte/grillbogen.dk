@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+function baseSitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://grillbogen.dk";
 
   const routes = [
@@ -26,4 +26,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
+}
+
+
+// ── LexHub-artikler ──────────────────────────────────────────────────
+// Salgsartikler publiceret gennem lexhub.dk/admin ligger på /artikler/<slug>.
+// De manglede i sitemappet, hvilket bremsede indeksering af sider kunder
+// betaler for skal rangere.
+async function lexhubArticleUrls(): Promise<MetadataRoute.Sitemap> {
+  try {
+    const res = await fetch(
+      `https://lexhub.dk/api/public/articles?domain=grillbogen.dk&limit=500`,
+      { next: { revalidate: 3600 } }
+    )
+    if (!res.ok) return []
+    const data = await res.json()
+    const articles: Array<{ slug: string; publishedAt: string | null }> =
+      data?.articles ?? []
+    return [
+      {
+        url: 'https://grillbogen.dk/artikler',
+        lastModified: new Date(),
+        changeFrequency: 'daily' as const,
+        priority: 0.7,
+      },
+      ...articles.map((a) => ({
+        url: `https://grillbogen.dk/artikler/${a.slug}`,
+        lastModified: a.publishedAt ? new Date(a.publishedAt) : new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+      })),
+    ]
+  } catch {
+    return []
+  }
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [base, lexhub] = await Promise.all([baseSitemap(), lexhubArticleUrls()])
+  return [...base, ...lexhub]
 }
