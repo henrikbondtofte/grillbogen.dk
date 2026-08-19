@@ -155,6 +155,39 @@ const articles = [
     imageAlt: "Tomahawk steak med langt ribben og tyk marmoreret kerne",
     imageCredit: "Amin Hasani",
   },
+  {
+    slug: "brisket-paa-grillen",
+    title: "Brisket på grillen",
+    excerpt:
+      "Oksebryst uden smoker. Trimning, rub, stallen, kernetemperatur og den hvile de fleste springer over.",
+    category: "Opskrift",
+    image:
+      "https://images.unsplash.com/photo-1519253328475-d8d3f8d521cc?w=900&h=700&fit=crop",
+    imageAlt: "Røgen står ud af en lukket grill under langtidstilberedning",
+    imageCredit: "Quilia",
+  },
+  {
+    slug: "flanksteak-paa-grillen",
+    title: "Flanksteak på grillen",
+    excerpt:
+      "Mest smag for pengene af alle oksebøffer. Marinade, maksimal varme og det snit der afgør om den er mør.",
+    category: "Opskrift",
+    image:
+      "https://images.unsplash.com/photo-1530166906126-2235e533180a?w=900&h=700&fit=crop",
+    imageAlt: "Kød på grillen med tydelige grillstreger og let røg",
+    imageCredit: "Anthony Cantin",
+  },
+  {
+    slug: "grillet-majs",
+    title: "Grillet majs",
+    excerpt:
+      "Tre metoder, tider og temperaturer - plus kryddersmør og elote. Tilbehøret der klarer sig selv.",
+    category: "Opskrift",
+    image:
+      "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=900&h=700&fit=crop",
+    imageAlt: "Farverige grøntsager skåret klar til grillen",
+    imageCredit: "Dane Deaner",
+  },
 ];
 
 const featured = articles[2]; // ribeye
