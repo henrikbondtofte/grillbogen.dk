@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Pulled Pork på Grillen - Komplet Guide (2026)",
-  description:
-    "Lær at lave perfekt pulled pork på din grill. Low and slow teknik, rub opskrift, temperaturguide og tips til mørt, saftigt pulled pork med røgsmag.",
+  title: "Pulled pork på grillen: komplet guide",
+  description: "Low and slow pulled pork på grillen: rub, røgtræ, temperaturstyring, stall og hviletid. Følg guiden, og træk møre tråde af nakkefileten hver eneste gang.",
   alternates: {
     canonical: "/pulled-pork-paa-grillen",
   },
   openGraph: {
-    title: "Pulled Pork på Grillen - Komplet Guide",
-    description:
-      "Lær at lave perfekt pulled pork på din grill. Low and slow teknik, rub opskrift og temperaturguide.",
+    title: "Pulled pork på grillen: komplet guide",
+    description: "Low and slow pulled pork på grillen: rub, røgtræ, temperaturstyring, stall og hviletid. Følg guiden, og træk møre tråde af nakkefileten hver eneste gang.",
     url: "https://grillbogen.dk/pulled-pork-paa-grillen",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,7 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Pulled Pork på Grillen - Komplet Guide",
-      description: "Lær at lave perfekt pulled pork på din grill. Low and slow teknik, rub opskrift, temperaturguide og tips til mørt, saftigt pulled pork med røgsmag.",
+      description: "Low and slow pulled pork på grillen: rub, røgtræ, temperaturstyring, stall og hviletid. Følg guiden, og træk møre tråde af nakkefileten hver eneste gang.",
       url: "https://grillbogen.dk/pulled-pork-paa-grillen",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/pulled-pork-paa-grillen",
@@ -258,6 +256,7 @@ export default function PulledPorkGuide() {
 
           <h2>Læs videre</h2>
           <ul>
+            <li>Samme røgteknik på kortere tid: <Link href="/varmroeget-laks">varmrøget laks på grillen</Link></li>
             <li>Brug for det rette setup? Læs <Link href="/fuldstaendig-guide-til-gasgrill">gasgrill-guiden</Link></li>
             <li>Vil du starte med noget hurtigere? Prøv <Link href="/perfekte-ribeye">en perfekt ribeye</Link></li>
             <li>Lav en god <Link href="/marinader-til-grill">marinade eller rub til dit kød</Link></li>

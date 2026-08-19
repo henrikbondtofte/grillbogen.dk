@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Fuldstændig Guide til Gasgrill (2026)",
-  description:
-    "Lær alt om gasgrill - valg, tænding, temperaturzoner, teknikker og vedligeholdelse. Komplet guide for begyndere og erfarne grillmestre.",
+  title: "Guide til gasgrill: zoner, tænding og pleje",
+  description: "Alt om gasgrill: valg af model, korrekt tænding, temperaturzoner, indirekte varme og vedligeholdelse. Følg guiden, og få fuldt styr på grillen fra dag ét.",
   alternates: {
     canonical: "/fuldstaendig-guide-til-gasgrill",
   },
   openGraph: {
-    title: "Fuldstændig Guide til Gasgrill",
-    description:
-      "Lær alt om gasgrill - valg, tænding, temperaturzoner, teknikker og vedligeholdelse for begyndere og erfarne.",
+    title: "Guide til gasgrill: zoner, tænding og pleje",
+    description: "Alt om gasgrill: valg af model, korrekt tænding, temperaturzoner, indirekte varme og vedligeholdelse. Følg guiden, og få fuldt styr på grillen fra dag ét.",
     url: "https://grillbogen.dk/fuldstaendig-guide-til-gasgrill",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,7 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Fuldstændig Guide til Gasgrill",
-      description: "Lær alt om gasgrill - valg, tænding, temperaturzoner, teknikker og vedligeholdelse. Komplet guide for begyndere og erfarne grillmestre.",
+      description: "Alt om gasgrill: valg af model, korrekt tænding, temperaturzoner, indirekte varme og vedligeholdelse. Følg guiden, og få fuldt styr på grillen fra dag ét.",
       url: "https://grillbogen.dk/fuldstaendig-guide-til-gasgrill",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/fuldstaendig-guide-til-gasgrill",

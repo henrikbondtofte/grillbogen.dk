@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Grill for Begyndere - Alt Du Skal Vide (2026)",
-  description:
-    "Komplet begynderguide til grill. Lær at vælge grill, tænde korrekt, styre temperaturen og lave din første perfekte grillmiddag.",
+  title: "Grill for begyndere: kom godt i gang",
+  description: "Din første grill: sådan vælger du model, tænder korrekt, styrer varmen og undgår de klassiske begynderfejl. Læs guiden, og lav en grillmiddag der lykkes.",
   alternates: {
     canonical: "/grill-for-begyndere",
   },
   openGraph: {
-    title: "Grill for Begyndere - Alt Du Skal Vide",
-    description:
-      "Komplet begynderguide til grill. Lær at vælge grill, tænde korrekt og lave din første perfekte grillmiddag.",
+    title: "Grill for begyndere: kom godt i gang",
+    description: "Din første grill: sådan vælger du model, tænder korrekt, styrer varmen og undgår de klassiske begynderfejl. Læs guiden, og lav en grillmiddag der lykkes.",
     url: "https://grillbogen.dk/grill-for-begyndere",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,7 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Grill for Begyndere - Alt Du Skal Vide",
-      description: "Komplet begynderguide til grill. Lær at vælge grill, tænde korrekt, styre temperaturen og lave din første perfekte grillmiddag.",
+      description: "Din første grill: sådan vælger du model, tænder korrekt, styrer varmen og undgår de klassiske begynderfejl. Læs guiden, og lav en grillmiddag der lykkes.",
       url: "https://grillbogen.dk/grill-for-begyndere",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/grill-for-begyndere",

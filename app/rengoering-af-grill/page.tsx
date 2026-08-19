@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Rengøring af Grill - Komplet Guide til Ren Grill (2026)",
-  description:
-    "Lær at rengøre din grill korrekt. Vedligeholdelse af gasgrill og kulgrill, fjernelse af fedt og rust, sæsonopbevaring og de bedste rengøringsmidler.",
+  title: "Rengøring af grill: trin for trin",
+  description: "Sådan rengør du grillen: risten efter hver brug, fedt og rust ved sæsonstart og korrekt vinteropbevaring. Følg planen, og forleng grillens levetid mærkbart.",
   alternates: {
     canonical: "/rengoering-af-grill",
   },
   openGraph: {
-    title: "Rengøring af Grill - Komplet Guide til Ren Grill",
-    description:
-      "Lær at rengøre din grill korrekt. Vedligeholdelse, fjernelse af fedt og rust, sæsonopbevaring og rengøringsmidler.",
+    title: "Rengøring af grill: trin for trin",
+    description: "Sådan rengør du grillen: risten efter hver brug, fedt og rust ved sæsonstart og korrekt vinteropbevaring. Følg planen, og forleng grillens levetid mærkbart.",
     url: "https://grillbogen.dk/rengoering-af-grill",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,7 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Rengøring af Grill - Komplet Guide til en Ren Grill",
-      description: "Lær at rengøre din grill korrekt. Vedligeholdelse af gasgrill og kulgrill, fjernelse af fedt og rust, sæsonopbevaring og de bedste rengøringsmidler.",
+      description: "Sådan rengør du grillen: risten efter hver brug, fedt og rust ved sæsonstart og korrekt vinteropbevaring. Følg planen, og forleng grillens levetid mærkbart.",
       url: "https://grillbogen.dk/rengoering-af-grill",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/rengoering-af-grill",
@@ -277,6 +275,8 @@ export default function RengoeringAfGrill() {
           <ul>
             <li>Brug for nyt udstyr? Læs <Link href="/fuldstaendig-guide-til-gasgrill">gasgrill-guiden</Link></li>
             <li>Klar til at grille? Prøv <Link href="/grillede-grontsager">grillede grøntsager</Link></li>
+            <li>Ren rist gør en forskel ved <Link href="/tomahawk-paa-grillen">tomahawk steak</Link></li>
+            <li>Overvejer du en anden type? Se <Link href="/kulgrill-vs-gasgrill">kulgrill vs. gasgrill</Link></li>
             <li>Ny til grill? Start med <Link href="/grill-for-begyndere">begynderguiden</Link></li>
           </ul>
         </div>

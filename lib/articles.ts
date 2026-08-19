@@ -1,4 +1,4 @@
-const LEXHUB_API = "https://lexhub.dk/api/public/articles"
+const LEXHUB_API = "https://www.lexhub.dk/api/public/articles"
 const SITE_DOMAIN = "grillbogen.dk"
 
 export interface Article {

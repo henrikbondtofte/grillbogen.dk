@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Varmrøget Laks på Grillen - Komplet Guide (2026)",
-  description:
-    "Sådan laver du varmrøget laks på din egen grill. Saltlage, røgtræ, temperaturer og timing. Saftig, røgfyldt laks der overgår alt det dyre i køledisken.",
+  title: "Varmrøget laks på grillen: sådan gør du",
+  description: "Varmrøget laks på din egen grill: saltlage, valg af røgtræ, temperatur og timing trin for trin. Prøv opskriften, og drop den dyre røgede laks i køledisken.",
   alternates: {
     canonical: "/varmroeget-laks",
   },
   openGraph: {
-    title: "Varmrøget Laks på Grillen",
-    description:
-      "Komplet guide til varmrøget laks. Saltlage, røgtræ, kernetemperaturer og de tricks der gør forskellen.",
+    title: "Varmrøget laks på grillen: sådan gør du",
+    description: "Varmrøget laks på din egen grill: saltlage, valg af røgtræ, temperatur og timing trin for trin. Prøv opskriften, og drop den dyre røgede laks i køledisken.",
     url: "https://grillbogen.dk/varmroeget-laks",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,8 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Varmrøget Laks på Grillen - Komplet Guide",
-      description:
-        "Sådan laver du varmrøget laks på din egen grill. Saltlage, røgtræ, temperaturer og timing.",
+      description: "Varmrøget laks på din egen grill: saltlage, valg af røgtræ, temperatur og timing trin for trin. Prøv opskriften, og drop den dyre røgede laks i køledisken.",
       url: "https://grillbogen.dk/varmroeget-laks",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/varmroeget-laks",

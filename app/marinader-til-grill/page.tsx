@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Marinader til Grill - 8 Opskrifter der Virker (2026)",
-  description:
-    "De bedste marinader til grill: Klassisk BBQ, asiatisk, chimichurri, jerk og mere. Lær teknikken bag en god marinade og hvor længe kød skal marinere.",
+  title: "Marinader til grill: 8 opskrifter",
+  description: "Otte gennemtestede marinader til grill, fra klassisk BBQ til chimichurri og bulgogi. Lær teknikken og marineringstiden, og vælg din favorit til weekenden.",
   alternates: {
     canonical: "/marinader-til-grill",
   },
   openGraph: {
-    title: "Marinader til Grill - 8 Opskrifter der Virker",
-    description:
-      "De bedste marinader til grill: Klassisk BBQ, asiatisk, chimichurri, jerk og mere. Lær teknikken bag en god marinade.",
+    title: "Marinader til grill: 8 opskrifter",
+    description: "Otte gennemtestede marinader til grill, fra klassisk BBQ til chimichurri og bulgogi. Lær teknikken og marineringstiden, og vælg din favorit til weekenden.",
     url: "https://grillbogen.dk/marinader-til-grill",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,7 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Marinader til Grill - 8 Opskrifter der Virker",
-      description: "De bedste marinader til grill: Klassisk BBQ, asiatisk, chimichurri, jerk og mere. Lær teknikken bag en god marinade og hvor længe kød skal marinere.",
+      description: "Otte gennemtestede marinader til grill, fra klassisk BBQ til chimichurri og bulgogi. Lær teknikken og marineringstiden, og vælg din favorit til weekenden.",
       url: "https://grillbogen.dk/marinader-til-grill",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/marinader-til-grill",
@@ -366,6 +364,7 @@ export default function MarinaderTilGrill() {
 
           <h2>Læs videre</h2>
           <ul>
+            <li>Marinaden gør mest gavn på magert kød: <Link href="/grillet-svinemoerbrad">grillet svinemørbrad</Link></li>
             <li>Prøv marinaden på <Link href="/grillede-grontsager">grillede grøntsager</Link></li>
             <li>Lær at lave en perfekt <Link href="/pulled-pork-paa-grillen">pulled pork med rub</Link></li>
             <li>Test marinaden på en <Link href="/perfekte-ribeye">ribeye steak</Link></li>

@@ -17,6 +17,10 @@ function baseSitemap(): MetadataRoute.Sitemap {
     { path: "/marinader-til-grill", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/rengoering-af-grill", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/is-dessert-efter-grillen", priority: 0.7, changeFrequency: "monthly" as const },
+    // /artikler hører til her og ikke i lexhubArticleUrls(): oversigten findes
+    // uanset om LexHub-kaldet fejler, og skal ikke forsvinde ud af sitemappet
+    // hver gang API'et er nede.
+    { path: "/artikler", priority: 0.7, changeFrequency: "daily" as const },
     { path: "/om", priority: 0.5, changeFrequency: "yearly" as const },
   ];
 
@@ -36,7 +40,7 @@ function baseSitemap(): MetadataRoute.Sitemap {
 async function lexhubArticleUrls(): Promise<MetadataRoute.Sitemap> {
   try {
     const res = await fetch(
-      `https://lexhub.dk/api/public/articles?domain=grillbogen.dk&limit=500`,
+      `https://www.lexhub.dk/api/public/articles?domain=grillbogen.dk&limit=500`,
       { next: { revalidate: 3600 } }
     )
     if (!res.ok) return []
@@ -44,12 +48,6 @@ async function lexhubArticleUrls(): Promise<MetadataRoute.Sitemap> {
     const articles: Array<{ slug: string; publishedAt: string | null }> =
       data?.articles ?? []
     return [
-      {
-        url: 'https://grillbogen.dk/artikler',
-        lastModified: new Date(),
-        changeFrequency: 'daily' as const,
-        priority: 0.7,
-      },
       ...articles.map((a) => ({
         url: `https://grillbogen.dk/artikler/${a.slug}`,
         lastModified: a.publishedAt ? new Date(a.publishedAt) : new Date(),

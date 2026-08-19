@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Grillede Grøntsager - Perfekte Grøntsager på Grillen (2026)",
-  description:
-    "Lær at grille grøntsager korrekt. Temperaturer, tider og teknikker til peberfrugter, squash, majs, aubergine og meget mere.",
+  title: "Grillede grøntsager: tider og teknik",
+  description: "Grillede grøntsager der ikke bliver til kul: rigtige temperaturer, tider og udskæring til majs, squash, peberfrugt og aubergine. Prøv teknikken i aften.",
   alternates: {
     canonical: "/grillede-grontsager",
   },
   openGraph: {
-    title: "Grillede Grøntsager - Perfekte Grøntsager på Grillen",
-    description:
-      "Lær at grille grøntsager korrekt. Temperaturer, tider og teknikker til peberfrugter, squash, majs og aubergine.",
+    title: "Grillede grøntsager: tider og teknik",
+    description: "Grillede grøntsager der ikke bliver til kul: rigtige temperaturer, tider og udskæring til majs, squash, peberfrugt og aubergine. Prøv teknikken i aften.",
     url: "https://grillbogen.dk/grillede-grontsager",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,7 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Grillede Grøntsager - Perfekte Grøntsager på Grillen",
-      description: "Lær at grille grøntsager korrekt. Temperaturer, tider og teknikker til peberfrugter, squash, majs, aubergine og meget mere.",
+      description: "Grillede grøntsager der ikke bliver til kul: rigtige temperaturer, tider og udskæring til majs, squash, peberfrugt og aubergine. Prøv teknikken i aften.",
       url: "https://grillbogen.dk/grillede-grontsager",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/grillede-grontsager",
@@ -312,6 +310,8 @@ export default function GrilledeGrontsager() {
           <ul>
             <li>Prøv en <Link href="/marinader-til-grill">hjemmelavet marinade</Link> til dine grøntsager</li>
             <li>Server grøntsagerne til en <Link href="/perfekte-ribeye">perfekt ribeye</Link></li>
+            <li>Eller som tilbehør til <Link href="/grillet-svinemoerbrad">grillet svinemørbrad</Link></li>
+            <li>Skal det være stort? Læs om <Link href="/tomahawk-paa-grillen">tomahawk på grillen</Link></li>
             <li>Ny til grill? Start med <Link href="/grill-for-begyndere">begynderguiden</Link></li>
           </ul>
         </div>

@@ -3,16 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Om Grillbogen.dk - Danmarks Grillguide",
+  // Absolut titel: templaten ville ellers give "Om Grillbogen.dk | Grillbogen.dk".
+  title: {
+    absolute: "Om Grillbogen.dk: redaktionen bag magasinet",
+  },
   description:
-    "Lær mere om Grillbogen.dk - Danmarks komplette grillguide med guides, opskrifter og teknikker til alle niveauer.",
+    "Bag om Grillbogen.dk: hvem der skriver, hvordan opskrifterne testes, og hvorfor vi måler i kernetemperatur frem for minutter. Læs om redaktionen bag her.",
   alternates: {
     canonical: "/om",
   },
   openGraph: {
-    title: "Om Grillbogen.dk",
+    title: "Om Grillbogen.dk: redaktionen bag magasinet",
     description:
-      "Lær mere om Grillbogen.dk - Danmarks komplette grillguide med guides, opskrifter og teknikker til alle niveauer.",
+      "Bag om Grillbogen.dk: hvem der skriver, hvordan opskrifterne testes, og hvorfor vi måler i kernetemperatur frem for minutter.",
     url: "https://grillbogen.dk/om",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -20,9 +23,40 @@ export const metadata: Metadata = {
   },
 };
 
+function AboutSchema() {
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: "Om Grillbogen.dk",
+      description:
+        "Bag om Grillbogen.dk: hvem der skriver, hvordan opskrifterne testes, og redaktionens metode.",
+      url: "https://grillbogen.dk/om",
+      inLanguage: "da",
+      mainEntity: {
+        "@type": "Organization",
+        name: "Grillbogen.dk",
+        url: "https://grillbogen.dk",
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Forside", item: "https://grillbogen.dk" },
+        { "@type": "ListItem", position: 2, name: "Om Grillbogen.dk", item: "https://grillbogen.dk/om" },
+      ],
+    },
+  ];
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+  );
+}
+
 export default function Om() {
   return (
     <>
+      <AboutSchema />
       {/* Hero - simpler for about page */}
       <div className="relative bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
@@ -54,7 +88,7 @@ export default function Om() {
 
       <div className="max-w-4xl mx-auto px-4 py-10">
         {/* Breadcrumbs */}
-        <nav className="text-sm text-[var(--ash)] mb-8 flex items-center gap-2">
+        <nav aria-label="Brødkrumme" className="text-sm text-[var(--ash)] mb-8 flex items-center gap-2">
           <Link href="/" className="hover:text-[var(--ember)] no-underline transition-colors">
             Forside
           </Link>

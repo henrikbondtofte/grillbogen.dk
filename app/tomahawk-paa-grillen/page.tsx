@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Tomahawk Steak på Grillen - Komplet Guide (2026)",
-  description:
-    "Sådan griller du en tomahawk steak. Reverse sear, krydring, kernetemperaturer og timing for den 5 cm tykke kongebøf. Inklusiv tips til hvile og servering.",
+  title: "Tomahawk steak på grillen: reverse sear",
+  description: "Sådan griller du en tomahawk på 5 cm: krydring, reverse sear, kernetemperatur og hviletid trin for trin. Følg opskriften, og server kongebøffen perfekt.",
   alternates: {
     canonical: "/tomahawk-paa-grillen",
   },
   openGraph: {
-    title: "Tomahawk Steak på Grillen",
-    description:
-      "Komplet guide til tomahawk på grillen. Reverse sear, kernetemperaturer, krydring og de tricks der gør forskellen.",
+    title: "Tomahawk steak på grillen: reverse sear",
+    description: "Sådan griller du en tomahawk på 5 cm: krydring, reverse sear, kernetemperatur og hviletid trin for trin. Følg opskriften, og server kongebøffen perfekt.",
     url: "https://grillbogen.dk/tomahawk-paa-grillen",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,8 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Tomahawk Steak på Grillen",
-      description:
-        "Komplet guide til tomahawk på grillen. Reverse sear, kernetemperaturer, krydring og hvile.",
+      description: "Sådan griller du en tomahawk på 5 cm: krydring, reverse sear, kernetemperatur og hviletid trin for trin. Følg opskriften, og server kongebøffen perfekt.",
       url: "https://grillbogen.dk/tomahawk-paa-grillen",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/tomahawk-paa-grillen",

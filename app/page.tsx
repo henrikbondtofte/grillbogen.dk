@@ -1,5 +1,26 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Grillbogen.dk - guides, opskrifter og grillteknik",
+  },
+  description:
+    "Dansk grillmagasin med testede opskrifter og konkrete guides til kul, gas og røg. Temperaturer, tider og teknik samlet ét sted - find din næste ret her.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Grillbogen.dk - guides, opskrifter og grillteknik",
+    description:
+      "Dansk grillmagasin med testede opskrifter og konkrete guides til kul, gas og røg. Temperaturer, tider og teknik samlet ét sted.",
+    url: "https://grillbogen.dk",
+    siteName: "Grillbogen.dk",
+    locale: "da_DK",
+    type: "website",
+  },
+};
 
 const articles = [
   {
@@ -142,9 +163,37 @@ const restOfList = articles.filter(
   (a) => a.slug !== featured.slug && !secondary.find((s) => s.slug === a.slug)
 );
 
+// ItemList over forsidens artikler. Giver Google en eksplicit liste over
+// sitets vigtigste sider fra den side der har flest interne links ind.
+function HomeSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Grillbogen.dk",
+    description:
+      "Dansk grillmagasin med testede opskrifter og konkrete guides til kul, gas og røg.",
+    url: "https://grillbogen.dk",
+    inLanguage: "da",
+    isPartOf: { "@type": "WebSite", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: articles.map((a, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: a.title,
+        url: `https://grillbogen.dk/${a.slug}`,
+      })),
+    },
+  };
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+  );
+}
+
 export default function Home() {
   return (
     <>
+      <HomeSchema />
       {/* ============== MAGAZINE COVER HERO ============== */}
       <section className="relative bg-[var(--paper)] border-b border-[var(--paper-edge)] overflow-hidden">
         <div className="absolute inset-0 paper-grain pointer-events-none" />

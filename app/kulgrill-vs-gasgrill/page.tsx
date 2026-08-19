@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Kulgrill vs Gasgrill - Hvad Skal Du Vælge? (2026)",
-  description:
-    "Komplet sammenligning af kulgrill og gasgrill: smag, pris, bekvemmelighed, vedligeholdelse og hvad der passer bedst til dig.",
+  title: "Kulgrill vs. gasgrill: hvad skal du vælge?",
+  description: "Kulgrill eller gasgrill? Vi sammenligner smag, pris, opvarmningstid, vedligehold og pladsbehov, så du kan vælge den grill der passer bedst til din hverdag.",
   alternates: {
     canonical: "/kulgrill-vs-gasgrill",
   },
   openGraph: {
-    title: "Kulgrill vs Gasgrill - Hvad Skal Du Vælge?",
-    description:
-      "Komplet sammenligning af kulgrill og gasgrill: smag, pris, bekvemmelighed og vedligeholdelse.",
+    title: "Kulgrill vs. gasgrill: hvad skal du vælge?",
+    description: "Kulgrill eller gasgrill? Vi sammenligner smag, pris, opvarmningstid, vedligehold og pladsbehov, så du kan vælge den grill der passer bedst til din hverdag.",
     url: "https://grillbogen.dk/kulgrill-vs-gasgrill",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,7 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Kulgrill vs Gasgrill - Hvad Skal Du Vælge?",
-      description: "Komplet sammenligning af kulgrill og gasgrill: smag, pris, bekvemmelighed, vedligeholdelse og hvad der passer bedst til dig.",
+      description: "Kulgrill eller gasgrill? Vi sammenligner smag, pris, opvarmningstid, vedligehold og pladsbehov, så du kan vælge den grill der passer bedst til din hverdag.",
       url: "https://grillbogen.dk/kulgrill-vs-gasgrill",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/kulgrill-vs-gasgrill",
@@ -249,6 +247,7 @@ export default function KulgrillVsGasgrill() {
           <h2>Læs videre</h2>
           <ul>
             <li>Valgt gasgrill? Læs vores <Link href="/fuldstaendig-guide-til-gasgrill">komplette gasgrill-guide</Link></li>
+            <li>Valgt kulgrill? Så kan du <Link href="/varmroeget-laks">varmrøge laks</Link> med det samme</li>
             <li>Klar til at grille? Start med <Link href="/perfekte-ribeye">den perfekte ribeye</Link></li>
             <li>Uanset valg: Lær at <Link href="/rengoering-af-grill">vedligeholde din grill</Link></li>
             <li>Første grill? Se <Link href="/grill-for-begyndere">vores begynderguide</Link></li>

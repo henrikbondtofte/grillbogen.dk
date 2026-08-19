@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Is som Dessert efter Grillen - Vælg Rigtigt (2026)",
-  description:
-    "Guide til at servere is som den perfekte afslutning på en grillaften. Fra klassisk flødeis til sæsonens sorbetter og grillede frugter med is.",
+  title: "Is som dessert efter grillen",
+  description: "Is som dessert efter grillmaden: vælg mellem flødeis, sorbet og grillede frugter, og se hvordan du serverer til mange gæster på én gang. Find favoritten her.",
   alternates: {
     canonical: "/is-dessert-efter-grillen",
   },
   openGraph: {
-    title: "Is som Dessert efter Grillen - Vælg Rigtigt",
-    description:
-      "Guide til at servere is som den perfekte afslutning på en grillaften. Fra klassisk flødeis til sæsonens sorbetter.",
+    title: "Is som dessert efter grillen",
+    description: "Is som dessert efter grillmaden: vælg mellem flødeis, sorbet og grillede frugter, og se hvordan du serverer til mange gæster på én gang. Find favoritten her.",
     url: "https://grillbogen.dk/is-dessert-efter-grillen",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,7 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Is som Dessert efter Grillen",
-      description: "Guide til at servere is som den perfekte afslutning på en grillaften. Fra klassisk flødeis til sæsonens sorbetter - og hvorfor kvaliteten af isen gør hele forskellen.",
+      description: "Is som dessert efter grillmaden: vælg mellem flødeis, sorbet og grillede frugter, og se hvordan du serverer til mange gæster på én gang. Find favoritten her.",
       url: "https://grillbogen.dk/is-dessert-efter-grillen",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/is-dessert-efter-grillen",

@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Den Perfekte Ribeye Steak på Grillen (2026)",
-  description:
-    "Step-by-step guide til at grille den perfekte ribeye. Reverse sear teknik, kernetemperaturer, krydring og de tricks der gør forskellen.",
+  title: "Den perfekte ribeye steak på grillen",
+  description: "Sådan griller du den perfekte ribeye: valg af kød, krydring, reverse sear og kernetemperaturer trin for trin. Læs med, og ram medium rare hver eneste gang.",
   alternates: {
     canonical: "/perfekte-ribeye",
   },
   openGraph: {
-    title: "Den Perfekte Ribeye Steak på Grillen",
-    description:
-      "Step-by-step guide til at grille den perfekte ribeye. Reverse sear teknik, kernetemperaturer og krydring.",
+    title: "Den perfekte ribeye steak på grillen",
+    description: "Sådan griller du den perfekte ribeye: valg af kød, krydring, reverse sear og kernetemperaturer trin for trin. Læs med, og ram medium rare hver eneste gang.",
     url: "https://grillbogen.dk/perfekte-ribeye",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,8 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Den Perfekte Ribeye Steak på Grillen",
-      description:
-        "Step-by-step guide til at grille den perfekte ribeye. Reverse sear teknik, kernetemperaturer, krydring og de tricks der gør forskellen.",
+      description: "Sådan griller du den perfekte ribeye: valg af kød, krydring, reverse sear og kernetemperaturer trin for trin. Læs med, og ram medium rare hver eneste gang.",
       url: "https://grillbogen.dk/perfekte-ribeye",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/perfekte-ribeye",
@@ -256,6 +253,7 @@ export default function RibeyeGuide() {
 
           <h2>Næste skridt</h2>
           <ul>
+            <li>Vil du have samme teknik i XL? Læs om <Link href="/tomahawk-paa-grillen">tomahawk steak på grillen</Link></li>
             <li>Klar til en større udfordring? Prøv <Link href="/pulled-pork-paa-grillen">pulled pork</Link></li>
             <li>Vil du optimere din gasgrill? Læs <Link href="/fuldstaendig-guide-til-gasgrill">gasgrill-guiden</Link></li>
             <li>Prøv en <Link href="/marinader-til-grill">hjemmelavet marinade til din steak</Link></li>

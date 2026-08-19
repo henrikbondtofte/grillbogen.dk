@@ -10,9 +10,10 @@ export const metadata: Metadata = {
   },
   description:
     "Et redaktionelt grillmagasin om røg, glød og håndværk. Guides, opskrifter, teknikker og anmeldelser - fra første tænding til perfekt brisket.",
-  alternates: {
-    canonical: "/",
-  },
+  // BEMÆRK: sæt ALDRIG en default canonical her. Metadata arves ned i
+  // segmenterne, så en canonical i layoutet gør, at enhver side der glemmer
+  // at overskrive den, peger på forsiden. Det skete for /artikler og alle
+  // LexHub-artikler under den. Hver side sætter sin egen canonical.
   openGraph: {
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -41,6 +42,7 @@ const navLinks = [
   { href: "/marinader-til-grill", label: "Marinader" },
   { href: "/rengoering-af-grill", label: "Rengøring" },
   { href: "/grill-for-begyndere", label: "Begynder" },
+  { href: "/artikler", label: "Artikler" },
   { href: "/om", label: "Om" },
 ];
 
@@ -56,6 +58,8 @@ const footerArticles = [
   { href: "/marinader-til-grill", label: "Marinader" },
   { href: "/rengoering-af-grill", label: "Rengøring af grill" },
   { href: "/grill-for-begyndere", label: "Begynderguide" },
+  { href: "/is-dessert-efter-grillen", label: "Is som dessert" },
+  { href: "/artikler", label: "Alle artikler" },
 ];
 
 function SchemaMarkup() {
@@ -66,10 +70,10 @@ function SchemaMarkup() {
       "@type": "Organization",
       name: "Grillbogen.dk",
       url: "https://grillbogen.dk",
-      logo: "https://grillbogen.dk/icon.png",
+      // Ingen logo-property: /icon.png findes ikke i public/, og en logo-URL
+      // der giver 404 er værre end ingen logo-property.
       description:
         "Et redaktionelt grillmagasin med opskrifter, teknikker og anmeldelser",
-      sameAs: [],
     },
     {
       "@context": "https://schema.org",
@@ -79,9 +83,16 @@ function SchemaMarkup() {
       description:
         "Et redaktionelt grillmagasin om røg, glød og håndværk.",
       inLanguage: "da",
+      publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
+      // Peger på /artikler, som faktisk filtrerer på ?q=. Forsiden gjorde
+      // ingenting med parameteren, og en SearchAction der ikke søger er
+      // reelt en falsk erklæring over for Google.
       potentialAction: {
         "@type": "SearchAction",
-        target: "https://grillbogen.dk/?q={search_term_string}",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: "https://grillbogen.dk/artikler?q={search_term_string}",
+        },
         "query-input": "required name=search_term_string",
       },
     },

@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Grillet Svinemørbrad - Saftig Hver Gang (2026)",
-  description:
-    "Sådan griller du svinemørbrad uden at tørre den ud. Marinade, kernetemperatur, hviletid og teknikken med direkte/indirekte varme. Mørt, saftigt resultat hver gang.",
+  title: "Grillet svinemørbrad: saftig hver gang",
+  description: "Sådan griller du svinemørbrad uden at tørre den ud: marinade, direkte og indirekte varme, kernetemperatur og hviletid. Prøv den til den næste grillaften.",
   alternates: {
     canonical: "/grillet-svinemoerbrad",
   },
   openGraph: {
-    title: "Grillet Svinemørbrad - Saftig Hver Gang",
-    description:
-      "Komplet guide til grillet svinemørbrad. Marinade, kernetemperatur og de tricks der forhindrer tør, kedelig mørbrad.",
+    title: "Grillet svinemørbrad: saftig hver gang",
+    description: "Sådan griller du svinemørbrad uden at tørre den ud: marinade, direkte og indirekte varme, kernetemperatur og hviletid. Prøv den til den næste grillaften.",
     url: "https://grillbogen.dk/grillet-svinemoerbrad",
     siteName: "Grillbogen.dk",
     locale: "da_DK",
@@ -27,8 +25,7 @@ function ArticleSchema() {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: "Grillet Svinemørbrad - Saftig Hver Gang",
-      description:
-        "Sådan griller du svinemørbrad uden at tørre den ud. Marinade, kernetemperatur, hviletid og teknik.",
+      description: "Sådan griller du svinemørbrad uden at tørre den ud: marinade, direkte og indirekte varme, kernetemperatur og hviletid. Prøv den til den næste grillaften.",
       url: "https://grillbogen.dk/grillet-svinemoerbrad",
       publisher: { "@type": "Organization", name: "Grillbogen.dk", url: "https://grillbogen.dk" },
       mainEntityOfPage: "https://grillbogen.dk/grillet-svinemoerbrad",
