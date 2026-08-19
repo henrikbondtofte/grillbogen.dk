@@ -21,6 +21,14 @@ export default async function ArtiklerPage() {
         <div className="space-y-4">
           {articles.map((article: any) => (
             <Link key={article.id} href={`/artikler/${article.slug}`} className="block p-6 bg-white rounded-lg border hover:shadow-md transition-shadow">
+              {article.coverImage && (
+                <img
+                  src={article.coverImage}
+                  alt={article.title}
+                  loading="lazy"
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+              )}
               <h2 className="text-xl font-semibold mb-2">{article.title}</h2>
               {article.excerpt && <p className="text-gray-600">{article.excerpt}</p>}
               <time className="text-sm text-gray-400 mt-2 block">

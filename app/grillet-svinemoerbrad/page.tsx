@@ -52,7 +52,7 @@ export default function GrilletSvinemoerbradGuide() {
       <ArticleSchema />
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
-          src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1400&h=500&fit=crop"
+          src="https://images.unsplash.com/photo-1612156502174-bbbad9882af2?w=1400&h=500&fit=crop"
           alt="Grillet svinemørbrad skåret i tykke skiver med rosa kerne"
           fill
           className="object-cover opacity-30"
@@ -165,14 +165,14 @@ export default function GrilletSvinemoerbradGuide() {
           <div className="relative rounded-2xl overflow-hidden my-10">
             <div className="relative h-72 md:h-80">
               <Image
-                src="https://images.unsplash.com/photo-1529193591184-b1d58069ecf0?w=800&h=450&fit=crop"
+                src="https://images.unsplash.com/photo-1530166906126-2235e533180a?w=800&h=450&fit=crop"
                 alt="Kødet ligger på grillen med tydelige grillstreger og let røg"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 800px"
               />
             </div>
-            <p className="image-credit">Foto: <a href="https://unsplash.com/@evanthewise" target="_blank" rel="noopener noreferrer">Evan Wise</a> / Unsplash</p>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@arizonanthony" target="_blank" rel="noopener noreferrer">Anthony Cantin</a> / Unsplash</p>
           </div>
 
           <h2>Selve grillningen - trin for trin</h2>
@@ -262,6 +262,21 @@ export default function GrilletSvinemoerbradGuide() {
             <li><strong>Glemt sølvhinden:</strong> Den krymper og gør mørbraden buet og besværlig at skære.</li>
             <li><strong>Ingen termometer:</strong> Du kan ikke gætte dig til 60°C i kernen. Køb et termometer til 200 kroner - det betaler sig hjem på første mørbrad.</li>
           </ul>
+
+          {/* YouTube video */}
+          <h2>Se det i praksis</h2>
+          <p>
+            Her er hele forløbet på video - fra klargøring og krydring til den færdige mørbrad på skærebrættet:
+          </p>
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/0f2NFRZ5ZVI"
+              title="Grillopskrift - BBQ pimpet svinemørbrad"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="image-credit">Video: Napoleon Grill Danmark (YouTube)</p>
 
           <h2>Næste skridt</h2>
           <ul>

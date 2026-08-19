@@ -257,6 +257,21 @@ export default function TomahawkGuide() {
             <li><strong>For meget krydring:</strong> Den her udskæring har enorm smag i sig selv. Salt, peber, måske rosmarin. Ikke en hel rub.</li>
           </ul>
 
+          {/* YouTube video */}
+          <h2>Se det i praksis</h2>
+          <p>
+            Her griller Adam Perry Lang en tomahawk over kul - læg mærke til hvor tålmodigt han arbejder med den indirekte varme før searen:
+          </p>
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/43sFm2fzOwk"
+              title="Charcoal Grilled Tomahawk Steak with Adam Perry Lang"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="image-credit">Video: YETI (YouTube)</p>
+
           <h2>Næste skridt</h2>
           <ul>
             <li>Vil du øve teknikken på en billigere udskæring? Læs <Link href="/perfekte-ribeye">den perfekte ribeye</Link></li>

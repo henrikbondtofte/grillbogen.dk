@@ -52,8 +52,8 @@ export default function VarmroegetLaksGuide() {
       <ArticleSchema />
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
-          src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=1400&h=500&fit=crop"
-          alt="Varmrøget laksefilet med tydelig røgring og crusty overflade"
+          src="https://images.unsplash.com/photo-1633524792906-73b111908d9c?w=1400&h=500&fit=crop"
+          alt="Laksefilet der ligger med skindet nedad på grillristen under varmrøgning"
           fill
           className="object-cover opacity-30"
           priority
@@ -144,14 +144,15 @@ export default function VarmroegetLaksGuide() {
           <div className="relative rounded-2xl overflow-hidden my-10">
             <div className="relative h-72 md:h-80">
               <Image
-                src="https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=800&h=450&fit=crop"
-                alt="Røgtræ flis ligger klar til at blive lagt på glødende kul"
+                src="https://images.unsplash.com/photo-1502030818212-8601501607a6?w=800&h=450&fit=crop"
+                alt="Glødende røgtræ brændt ned til jævn glød - grundlaget for den lave varme laksen skal røges ved"
                 fill
+                loading="lazy"
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 800px"
               />
             </div>
-            <p className="image-credit">Foto: <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></p>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@ludenus" target="_blank" rel="noopener noreferrer">Andrey Andreyev</a> / Unsplash</p>
           </div>
 
           <h2>Røgtræ - hvad passer til laks</h2>
@@ -197,6 +198,20 @@ export default function VarmroegetLaksGuide() {
             <li><strong>Røgtid:</strong> Du behøver kun røg i den første halvdel. Bagefter overtager varmen alligevel</li>
           </ul>
 
+          <div className="relative rounded-2xl overflow-hidden my-10">
+            <div className="relative h-72 md:h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1695882257148-b35580f4c4b6?w=800&h=450&fit=crop"
+                alt="Laks der røges på grillristen og vendes med en grilltang"
+                fill
+                loading="lazy"
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@kate_gliz" target="_blank" rel="noopener noreferrer">Kateryna Hliznitsova</a> / Unsplash</p>
+          </div>
+
           <div className="tip-box">
             <strong>Termometeret afgør:</strong> Gætter du på laks, ender du med tørre laksechips. Stik et termometer ind i den tykkeste del. 60°C i kernen = saftig og fast. 65°C = begyndt at tørre ud. 70°C = du har lavet kattemad.
           </div>
@@ -223,6 +238,21 @@ export default function VarmroegetLaksGuide() {
             <li><strong>For meget røgtræ:</strong> En håndfuld flis er nok. Mere giver bitter, harpiksagtig smag.</li>
             <li><strong>Ingen termometer:</strong> Tid alene lyver. Kernetemperatur er det eneste der gælder.</li>
           </ul>
+
+          {/* YouTube video */}
+          <h2>Se det i praksis</h2>
+          <p>
+            Her er hele processen på video - saltlage, røgtræ og den lave, stabile varme der gør arbejdet:
+          </p>
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/tAvEqUUwELA"
+              title="Grillopskrift - Varmrøget laks"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="image-credit">Video: Traeger Grill Danmark (YouTube)</p>
 
           <h2>Næste skridt</h2>
           <ul>

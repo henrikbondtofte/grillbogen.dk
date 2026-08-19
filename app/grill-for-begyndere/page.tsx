@@ -53,8 +53,8 @@ export default function GrillForBegyndere() {
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
-          src="https://images.unsplash.com/photo-1504564321926-4bd1b3929d93?w=1400&h=500&fit=crop"
-          alt="Person der griller udendørs i solskin"
+          src="https://images.unsplash.com/photo-1569352950703-7d2f2bdfcd71?w=1400&h=500&fit=crop"
+          alt="Mand der griller ved et træhegn i haven"
           fill
           className="object-cover opacity-30"
           priority

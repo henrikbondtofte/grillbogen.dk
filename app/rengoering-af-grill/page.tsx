@@ -53,8 +53,8 @@ export default function RengoeringAfGrill() {
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
-          src="https://images.unsplash.com/photo-1529193591184-b1d58069ecf0?w=1400&h=500&fit=crop"
-          alt="Ren grill klar til brug"
+          src="https://images.unsplash.com/photo-1564346208978-94c0829fbbdf?w=1400&h=500&fit=crop"
+          alt="Sort kulgrill med kul i bunden, klar til rengøring"
           fill
           className="object-cover opacity-30"
           priority

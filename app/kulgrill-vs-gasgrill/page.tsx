@@ -53,8 +53,8 @@ export default function KulgrillVsGasgrill() {
       {/* Hero */}
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
-          src="https://images.unsplash.com/photo-1529193591184-b1d58069ecf0?w=1400&h=500&fit=crop"
-          alt="Kulgrill med glødende kul"
+          src="https://images.unsplash.com/photo-1512719724284-dbb9ef47eac5?w=1400&h=500&fit=crop"
+          alt="Kulgrill med flammende kul under risten"
           fill
           className="object-cover opacity-30"
           priority

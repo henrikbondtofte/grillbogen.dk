@@ -10,6 +10,7 @@ const articles = [
     category: "Guide",
     image:
       "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=900&h=700&fit=crop",
+    imageAlt: "Gasgrill med flammer og mad på risten",
     imageCredit: "Lily Banse",
   },
   {
@@ -19,8 +20,9 @@ const articles = [
       "Den store sammenligning: smag, pris, bekvemmelighed og vedligeholdelse. Hvad passer bedst til dig?",
     category: "Guide",
     image:
-      "https://images.unsplash.com/photo-1529193591184-b1d58069ecf0?w=900&h=700&fit=crop",
-    imageCredit: "Evan Wise",
+      "https://images.unsplash.com/photo-1512719724284-dbb9ef47eac5?w=900&h=700&fit=crop",
+    imageAlt: "Kulgrill med flammende kul klar til grillning",
+    imageCredit: "Jaco Pretorius",
   },
   {
     slug: "perfekte-ribeye",
@@ -30,6 +32,7 @@ const articles = [
     category: "Opskrift",
     image:
       "https://images.unsplash.com/photo-1558030006-450675393462?w=900&h=700&fit=crop",
+    imageAlt: "Perfekt grillet ribeye steak med tydelige grillmærker",
     imageCredit: "Emerson Vieira",
   },
   {
@@ -40,6 +43,7 @@ const articles = [
     category: "Opskrift",
     image:
       "https://images.unsplash.com/photo-1544025162-d76694265947?w=900&h=700&fit=crop",
+    imageAlt: "Saftigt pulled pork trukket fra hinanden i tråde",
     imageCredit: "Sander Dalhuisen",
   },
   {
@@ -49,8 +53,9 @@ const articles = [
       "Første gang med grillen? Her er alt du skal vide for at komme godt i gang - uden stress.",
     category: "Guide",
     image:
-      "https://images.unsplash.com/photo-1504564321926-4bd1b3929d93?w=900&h=700&fit=crop",
-    imageCredit: "Vincent Keiman",
+      "https://images.unsplash.com/photo-1569352950703-7d2f2bdfcd71?w=900&h=700&fit=crop",
+    imageAlt: "Mand der griller ved et træhegn i haven",
+    imageCredit: "Zach Reiner",
   },
   {
     slug: "is-dessert-efter-grillen",
@@ -60,6 +65,7 @@ const articles = [
     category: "Dessert",
     image:
       "https://images.unsplash.com/photo-1528344227352-9a704db46536?w=900&h=700&fit=crop",
+    imageAlt: "Grillede frugter serveret med flødeis som dessert",
     imageCredit: "Dale Gray",
   },
   {
@@ -70,6 +76,7 @@ const articles = [
     category: "Teknik",
     image:
       "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=900&h=700&fit=crop",
+    imageAlt: "Farverige grøntsager skåret klar til grillen",
     imageCredit: "Dane Deaner",
   },
   {
@@ -80,6 +87,7 @@ const articles = [
     category: "Vedligehold",
     image:
       "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=900&h=700&fit=crop",
+    imageAlt: "Grillrist der rengøres med stålbørste",
     imageCredit: "Stephen Andrews",
   },
   {
@@ -90,6 +98,7 @@ const articles = [
     category: "Opskrift",
     image:
       "https://images.unsplash.com/photo-1611171711912-e3f6b536f532?w=900&h=700&fit=crop",
+    imageAlt: "Marineret kød der grilles over jævn varme",
     imageCredit: "Z Grills",
   },
   {
@@ -99,8 +108,9 @@ const articles = [
       "Saltlage, røgtræ og kernetemperaturer. Saftig, røgfyldt laks der overgår alt det dyre i køledisken.",
     category: "Opskrift",
     image:
-      "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=900&h=700&fit=crop",
-    imageCredit: "Unsplash",
+      "https://images.unsplash.com/photo-1633524792906-73b111908d9c?w=900&h=700&fit=crop",
+    imageAlt: "Laksefilet med skindet nedad på grillristen under varmrøgning",
+    imageCredit: "Kostiantyn Li",
   },
   {
     slug: "grillet-svinemoerbrad",
@@ -109,8 +119,9 @@ const articles = [
       "Saftig og rosa hver gang. Marinade, kernetemperatur, hviletid og teknikken med direkte og indirekte varme.",
     category: "Opskrift",
     image:
-      "https://images.unsplash.com/photo-1544025162-d76694265947?w=900&h=700&fit=crop",
-    imageCredit: "Sander Dalhuisen",
+      "https://images.unsplash.com/photo-1612156502174-bbbad9882af2?w=900&h=700&fit=crop",
+    imageAlt: "Grillet svinemørbrad skåret i tykke skiver med rosa kerne",
+    imageCredit: "Frank Zhang",
   },
   {
     slug: "tomahawk-paa-grillen",
@@ -120,6 +131,7 @@ const articles = [
     category: "Opskrift",
     image:
       "https://images.unsplash.com/photo-1602945072881-75915b0f641f?w=900&h=700&fit=crop",
+    imageAlt: "Tomahawk steak med langt ribben og tyk marmoreret kerne",
     imageCredit: "Amin Hasani",
   },
 ];
@@ -227,6 +239,18 @@ export default function Home() {
                     Nr. 03
                   </span>
                 </div>
+                <p className="image-credit absolute bottom-1 right-3 z-20 m-0 text-[var(--smoke)]">
+                  Foto:{" "}
+                  <a
+                    href="https://unsplash.com/@emersonvieira"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--smoke)]"
+                  >
+                    Emerson Vieira
+                  </a>{" "}
+                  / Unsplash
+                </p>
                 <div className="absolute bottom-6 left-6 right-6">
                   <span className="text-[var(--butter)] text-[0.65rem] tracking-[0.3em] uppercase font-bold mb-2 block">
                     Månedens opskrift
@@ -312,8 +336,9 @@ export default function Home() {
             <div className="photo relative aspect-[4/3]">
               <Image
                 src={featured.image}
-                alt={featured.title}
+                alt={featured.imageAlt}
                 fill
+                loading="lazy"
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 60vw"
               />
@@ -323,6 +348,9 @@ export default function Home() {
               <div className="absolute top-4 right-4 text-[var(--paper)] text-[0.7rem] tracking-[0.25em] uppercase font-bold drop-shadow">
                 Anbefalet
               </div>
+              <span className="image-credit absolute bottom-1 right-3 text-[var(--paper)]/70 drop-shadow">
+                Foto: {featured.imageCredit} / Unsplash
+              </span>
             </div>
             <div className="p-7 md:p-9">
               <span className="issue-number">Nr. 03</span>
@@ -355,14 +383,18 @@ export default function Home() {
                 <div className="photo relative aspect-[16/10]">
                   <Image
                     src={article.image}
-                    alt={article.title}
+                    alt={article.imageAlt}
                     fill
+                    loading="lazy"
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 40vw"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="category-badge">{article.category}</span>
                   </div>
+                  <span className="image-credit absolute bottom-1 right-3 text-[var(--paper)]/70 drop-shadow">
+                    Foto: {article.imageCredit} / Unsplash
+                  </span>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <span className="issue-number">Nr. 0{idx + 4}</span>

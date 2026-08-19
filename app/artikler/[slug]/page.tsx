@@ -27,7 +27,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <Link href="/artikler" className="text-blue-600 hover:underline mb-8 block">&larr; Alle artikler</Link>
       <article>
         {article.coverImage && (
-          <img src={article.coverImage} alt={article.title} className="w-full h-64 object-cover rounded-lg mb-8" />
+          <img src={article.coverImage} alt={article.title} loading="lazy" className="w-full h-64 object-cover rounded-lg mb-8" />
         )}
         <h1 className="text-3xl font-bold mb-4">{article.title}</h1>
         <time className="text-gray-500 text-sm mb-8 block">

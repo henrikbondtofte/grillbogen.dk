@@ -26,8 +26,8 @@ export default function Om() {
       {/* Hero - simpler for about page */}
       <div className="relative bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
-          src="https://images.unsplash.com/photo-1529262123100-898cb9e0d85b?w=1400&h=500&fit=crop"
-          alt="Person der griller kød udendørs"
+          src="https://images.unsplash.com/photo-1503220178855-e31ec372b8ad?w=1400&h=500&fit=crop"
+          alt="Bøf der steger over åbne flammer på en kulgrill"
           fill
           className="object-cover opacity-20"
           priority
@@ -47,6 +47,9 @@ export default function Om() {
           </h1>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[var(--parchment)] to-transparent" />
+        <p className="image-credit absolute bottom-2 right-4 z-20 m-0 text-white/60">
+          Foto: <a href="https://unsplash.com/@philippcamera" target="_blank" rel="noopener noreferrer" className="text-white/60">Philipp Kämmerer</a> / Unsplash
+        </p>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10">
@@ -95,6 +98,20 @@ export default function Om() {
             er sponsoreret, og vi anbefaler kun produkter baseret på reel
             erfaring.
           </p>
+
+          <div className="relative rounded-2xl overflow-hidden my-10">
+            <div className="relative h-72 md:h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1519253328475-d8d3f8d521cc?w=800&h=450&fit=crop"
+                alt="Røgen står ud af en udendørs grill en solrig sommerdag"
+                fill
+                loading="lazy"
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@heyquilia" target="_blank" rel="noopener noreferrer">Quilia</a> / Unsplash</p>
+          </div>
 
           <h2>Vores filosofi</h2>
 
