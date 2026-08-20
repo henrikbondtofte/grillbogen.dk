@@ -127,6 +127,10 @@
   color: var(--wine);
   font-feature-settings: "ss01", "ss03";
 }
+/* Wine har kun 1.4:1 mod de moerke sektioner - brug den varme accent der */
+.display em.on-dark {
+  color: var(--saffron);
+}
 
 /* ---------- Ornamental flame divider ---------- */
 .flame-divider {
@@ -342,6 +346,28 @@
 }
 .temp-table tr:nth-child(even) td { background: var(--paper-soft); }
 .temp-table tr:last-child td { border-bottom: 2px solid var(--ink); }
+
+/* Mobil: 4-kolonne-tabellerne er bredere end skaermen og skubbede hele
+   siden vandret. Stram padding, og lad tabellen selv scrolle i stedet. */
+@media (max-width: 700px) {
+  .temp-table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .temp-table th,
+  .temp-table td {
+    padding: 0.6rem 0.65rem;
+  }
+  .temp-table th {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+  .temp-table td {
+    font-size: 0.9rem;
+  }
+}
 
 /* ---------- Article card (editorial issue style) ---------- */
 .issue-card {

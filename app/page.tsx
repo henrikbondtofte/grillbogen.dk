@@ -568,7 +568,7 @@ export default function Home() {
           <h2
             className="display text-4xl md:text-6xl text-[var(--paper)] mt-6 mb-6"
           >
-            Klar til at <em className="text-[var(--saffron)]">tænde op?</em>
+            Klar til at <em className="on-dark">tænde op?</em>
           </h2>
           <p className="text-lg text-[var(--smoke)] mb-10 max-w-xl mx-auto leading-relaxed">
             Start med begynderguiden, lær teknikkerne, og find din egen rytme
