@@ -1,443 +1,229 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   GRILLBOGEN — "VARMEZONER"
+   Designsprog: kulsort natgrill oplyst nedefra. Alt er bygget på varmeskalaen
+   (kulrød → flamme → glød → hvidglødende) og på aflæsninger i mono, som på et
+   stegetermometer. Ingen papir, ingen magasin-creme.
+   ========================================================================== */
+
 @layer base {
   :root {
-    /* Editorial cookbook palette */
-    --ink: #16110f;            /* near-black, smoky */
-    --char: #2a1f1c;           /* charred bark */
-    --ash: #6d5d57;            /* warm gray */
-    --smoke: #a8978f;          /* soft warm gray */
+    /* --- Kul & sod (flader) --- */
+    --coal: #0c0a09;         /* sidebund */
+    --soot: #13100e;         /* hævet sektion */
+    --grate: #1b1614;        /* kort */
+    --grate-hi: #262019;     /* kort hover / border-hover */
+    --edge: rgba(255, 236, 214, 0.09);
+    --edge-hi: rgba(255, 236, 214, 0.2);
 
-    --paper: #f6efe2;          /* cream parchment canvas */
-    --paper-soft: #ede3d1;     /* slightly deeper cream */
-    --paper-edge: #d9cbb2;     /* aged paper edge */
+    /* --- Tekst --- */
+    --bone: #f6ece0;         /* primær */
+    --fume: #b6a498;         /* sekundær */
+    --fume-dim: #7d6c62;     /* tertiær / metadata */
 
-    --wine: #5a1818;           /* deep wine / steak crust */
-    --wine-deep: #3d0f0f;
-    --wine-light: #7a2424;
+    /* --- Varmeskalaen --- */
+    --coalred: #8a1c09;      /* ulmende kul */
+    --flame: #e0400e;        /* flamme */
+    --ember: #ff7a18;        /* glød — primær accent */
+    --glow: #ffbe3d;         /* gul varme */
+    --sear: #ffe7ae;         /* hvidglødende højlys */
 
-    --ember: #d85420;          /* glowing ember orange */
-    --ember-deep: #a83a14;
-    --saffron: #d99a1d;        /* mustard / saffron accent */
-    --butter: #f1d68a;         /* warm butter highlight */
+    /* --- Aliaser brugt af artikelsiderne (må ikke fjernes) --- */
+    --obsidian: var(--coal);
+    --parchment: var(--coal);
+    --paper: var(--coal);
+    --cream: var(--coal);
+    --ink: var(--coal);
+    --soot-alias: var(--soot);
+    --char: var(--grate);
+    --sand: var(--grate);
+    --warm-gray: var(--grate);
+    --charcoal: var(--bone);
+    --iron: var(--bone);
+    --smoke: var(--fume);
+    --ash: var(--fume);
+    --copper: var(--flame);
+    --gold: var(--glow);
+    --saffron: var(--glow);
+    --butter: var(--sear);
+    --wine: var(--coalred);
+    --wine-deep: #6a1406;
+    --wine-light: var(--flame);
+    --bark: var(--coalred);
+    --paper-edge: var(--edge);
+    --paper-soft: var(--grate);
 
-    /* legacy aliases used by existing pages */
-    --obsidian: var(--ink);
-    --charcoal: var(--char);
-    --iron: var(--char);
-    --copper: var(--ember-deep);
-    --gold: var(--saffron);
-    --cream: var(--paper);
-    --sand: var(--paper-soft);
-    --bark: var(--wine);
-    --parchment: var(--paper);
-    --warm-gray: var(--paper-soft);
-    --flame: var(--ember);
+    /* --- Gradienter --- */
+    --heat: linear-gradient(90deg, var(--coalred) 0%, var(--flame) 32%, var(--ember) 64%, var(--glow) 100%);
+    --heat-v: linear-gradient(180deg, var(--glow) 0%, var(--ember) 40%, var(--flame) 75%, var(--coalred) 100%);
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   html, body {
-    background-color: var(--paper);
-    color: var(--ink);
+    background-color: var(--coal);
+    color: var(--bone);
   }
 
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
-    font-feature-settings: "ss01", "cv11";
+    text-rendering: optimizeLegibility;
+    /* Glød nedefra — som en grill der står og ulmer under siden */
     background-image:
-      radial-gradient(circle at 15% 10%, rgba(216, 84, 32, 0.04) 0, transparent 45%),
-      radial-gradient(circle at 90% 80%, rgba(90, 24, 24, 0.05) 0, transparent 50%);
+      radial-gradient(90rem 40rem at 50% -10%, rgba(255, 122, 24, 0.09) 0%, transparent 60%),
+      radial-gradient(60rem 30rem at 12% 105%, rgba(224, 64, 14, 0.07) 0%, transparent 65%);
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
-    font-weight: 700;
-    letter-spacing: -0.015em;
-    line-height: 1.05;
-    color: var(--ink);
-    font-feature-settings: "ss01", "ss03";
+    font-family: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.98;
+    color: var(--bone);
   }
 
   ::selection {
-    background-color: var(--wine);
-    color: var(--paper);
+    background-color: var(--ember);
+    color: var(--coal);
+  }
+
+  a { color: inherit; }
+
+  :focus-visible {
+    outline: 2px solid var(--ember);
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 }
 
-/* ---------- Paper grain ---------- */
-.paper-grain {
-  position: relative;
+/* ==========================================================================
+   1. VARMESKALA — gennemgående grafisk motiv
+   ========================================================================== */
+
+.heat-rule {
+  height: 3px;
+  width: 100%;
+  background: var(--heat);
+  border-radius: 999px;
 }
+
+.heat-rule-sm {
+  height: 2px;
+  background: var(--heat);
+  border-radius: 999px;
+}
+
+/* Grillrist — tynde parallelle stænger, brugt som sektionsovergang */
+.grate-lines {
+  height: 14px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--edge) 0px,
+    var(--edge) 1px,
+    transparent 1px,
+    transparent 11px
+  );
+  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+}
+
+/* Røgkorn — bevaret klassenavn fra tidligere design */
+.grain-texture::before,
 .paper-grain::after {
   content: '';
   position: absolute;
   inset: 0;
-  pointer-events: none;
-  opacity: 0.5;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.3 0 0 0 0 0.25 0 0 0 0.12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  z-index: 1;
-}
-
-.grain-texture::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.07;
+  opacity: 0.055;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 1;
 }
+.paper-grain { position: relative; }
 
-/* ---------- Editorial kicker labels ---------- */
+.ember-glow {
+  box-shadow:
+    0 0 0 1px rgba(255, 122, 24, 0.22),
+    0 24px 60px -24px rgba(224, 64, 14, 0.55);
+}
+
+/* ==========================================================================
+   2. TYPOGRAFI-HJÆLPERE
+   ========================================================================== */
+
+.display {
+  font-family: 'Bricolage Grotesque', 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  color: var(--bone);
+}
+.display em {
+  font-style: normal;
+  background: var(--heat);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Mono-aflæsning — som displayet på et stegetermometer */
+.spec {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+/* Etiket over overskrifter */
 .kicker {
-  font-family: 'Inter', sans-serif;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
   font-weight: 700;
-  font-size: 0.7rem;
-  letter-spacing: 0.32em;
+  font-size: 0.68rem;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--wine);
+  color: var(--ember);
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.7rem;
 }
 .kicker::before {
   content: '';
-  width: 1.5rem;
-  height: 1px;
-  background: var(--wine);
+  width: 1.6rem;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--heat);
   display: inline-block;
+  flex-shrink: 0;
 }
-.kicker.light { color: var(--saffron); }
-.kicker.light::before { background: var(--saffron); }
+.kicker.light { color: var(--glow); }
 .kicker.ember { color: var(--ember); }
-.kicker.ember::before { background: var(--ember); }
 
-/* ---------- Display heading utility ---------- */
-.display {
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 0.95;
-  font-feature-settings: "ss01", "ss03";
-}
-.display em {
-  font-style: italic;
-  font-weight: 400;
-  color: var(--wine);
-  font-feature-settings: "ss01", "ss03";
-}
-
-/* ---------- Ornamental flame divider ---------- */
-.flame-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  margin: 2rem 0;
-  color: var(--wine);
-}
-.flame-divider::before,
-.flame-divider::after {
-  content: '';
-  height: 1px;
-  flex: 1;
-  background: linear-gradient(90deg, transparent, var(--paper-edge), transparent);
-}
-.flame-divider svg { flex-shrink: 0; }
-
-/* ---------- Drop cap for editorial lead paragraphs ---------- */
-.dropcap::first-letter {
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 700;
-  font-size: 4.5rem;
-  line-height: 0.85;
-  float: left;
-  margin: 0.4rem 0.65rem 0 0;
-  color: var(--wine);
-  font-feature-settings: "ss03";
-}
-
-/* ---------- Prose (editorial cookbook) ---------- */
-.prose h2 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin-top: 3rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-}
-.prose h2::after {
-  content: '';
-  display: block;
-  width: 3rem;
-  height: 3px;
-  background: var(--wine);
-  margin-top: 0.65rem;
-  margin-bottom: 1.25rem;
-}
-
-.prose h3 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  font-style: italic;
-  color: var(--wine);
-  margin-top: 2.2rem;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.015em;
-  line-height: 1.2;
-}
-
-.prose p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.075rem;
-  line-height: 1.8;
-  color: #2a1f1c;
-  margin-bottom: 1.4rem;
-}
-
-.prose ul, .prose ol {
-  margin: 1.25rem 0 1.75rem 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.prose ul li {
-  position: relative;
-  padding-left: 1.75rem;
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: #2a1f1c;
-  margin-bottom: 0.625rem;
-}
-.prose ul li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.7rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  background: var(--ember);
-  transform: rotate(45deg);
-}
-
-.prose ol {
-  counter-reset: olcount;
-}
-.prose ol li {
-  position: relative;
-  padding-left: 2.5rem;
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: #2a1f1c;
-  margin-bottom: 0.875rem;
-  counter-increment: olcount;
-}
-.prose ol li::before {
-  content: counter(olcount, decimal-leading-zero);
-  position: absolute;
-  left: 0;
-  top: 0.05rem;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--wine);
-  letter-spacing: -0.02em;
-}
-
-.prose li strong { color: var(--ink); }
-
-.prose a {
-  color: var(--wine);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  text-decoration-color: rgba(90, 24, 24, 0.35);
-  transition: all 0.2s;
-}
-.prose a:hover {
-  color: var(--ember);
-  text-decoration-color: var(--ember);
-}
-
-.prose em { color: var(--wine); font-style: italic; }
-.prose strong { color: var(--ink); font-weight: 700; }
-
-.prose blockquote {
-  border: none;
-  padding: 2rem 1.5rem 2rem 3.5rem;
-  margin: 2.5rem 0;
-  background: var(--paper-soft);
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
-  font-size: 1.35rem;
-  line-height: 1.45;
-  color: var(--wine);
-  position: relative;
-}
-.prose blockquote::before {
-  content: '\201C';
-  position: absolute;
-  left: 0.75rem;
-  top: 0.4rem;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 5rem;
-  line-height: 1;
-  color: var(--ember);
-  opacity: 0.6;
-}
-
-/* ---------- Tip boxes (warm note card) ---------- */
-.tip-box {
-  position: relative;
-  background: var(--paper-soft);
-  border: 1px solid var(--paper-edge);
-  padding: 1.75rem 1.75rem 1.5rem;
-  margin: 2.25rem 0;
-  border-radius: 2px;
-  box-shadow: 4px 4px 0 var(--paper-edge);
-}
-.tip-box::before {
-  content: 'TIP';
-  position: absolute;
-  top: -0.65rem;
-  left: 1.25rem;
-  background: var(--wine);
-  color: var(--butter);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.25em;
-  padding: 0.25rem 0.7rem;
-}
-.tip-box strong { color: var(--wine); font-weight: 700; }
-
-/* ---------- Temperature / specs table ---------- */
-.temp-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  font-family: 'Inter', sans-serif;
-}
-.temp-table th {
-  background: var(--ink);
-  color: var(--butter);
-  padding: 0.85rem 1rem;
-  text-align: left;
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  border-bottom: 2px solid var(--ember);
-}
-.temp-table td {
-  padding: 0.85rem 1rem;
-  border-bottom: 1px solid var(--paper-edge);
-  font-size: 0.95rem;
-  color: var(--char);
-}
-.temp-table tr:nth-child(even) td { background: var(--paper-soft); }
-.temp-table tr:last-child td { border-bottom: 2px solid var(--ink); }
-
-/* ---------- Article card (editorial issue style) ---------- */
-.issue-card {
-  background: var(--paper);
-  border: 1px solid var(--paper-edge);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s, border-color 0.35s;
-  position: relative;
-}
-.issue-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 12px 14px 0 var(--paper-edge);
-  border-color: var(--ink);
-}
-.issue-card .photo {
-  position: relative;
-  overflow: hidden;
-  background: var(--paper-soft);
-}
-.issue-card .photo img,
-.issue-card .photo > span {
-  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.issue-card:hover .photo img,
-.issue-card:hover .photo > span {
-  transform: scale(1.04);
-}
-
-/* ---------- Featured "cover" card ---------- */
-.cover-card {
-  position: relative;
-  overflow: hidden;
-  background: var(--ink);
-}
-.cover-card .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(22, 17, 15, 0.1) 0%, rgba(22, 17, 15, 0.85) 100%);
-}
-
-/* ---------- YouTube embed ---------- */
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  margin: 2rem 0;
-  box-shadow: 8px 8px 0 var(--paper-edge);
-  background: var(--ink);
-}
-.video-container iframe {
-  position: absolute; top: 0; left: 0;
-  width: 100%; height: 100%; border: 0;
-}
-
-/* ---------- Image credit ---------- */
-.image-credit {
-  font-size: 0.7rem;
-  color: var(--ash);
-  text-align: right;
-  margin-top: 0.4rem;
-  font-style: italic;
-  letter-spacing: 0.02em;
-}
-.image-credit a { color: var(--ash); text-decoration: underline; }
-
-/* ---------- Section number marker ---------- */
 .issue-number {
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--wine);
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-}
-
-/* ---------- Category badge (editorial style) ---------- */
-.category-badge {
-  background: transparent;
-  color: var(--paper);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 700;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  letter-spacing: 0.28em;
-  padding: 0.35rem 0.7rem;
-  border: 1px solid rgba(246, 239, 226, 0.55);
-  background: rgba(22, 17, 15, 0.55);
-  backdrop-filter: blur(4px);
-}
-.category-badge.on-paper {
-  color: var(--wine);
-  border-color: var(--wine);
-  background: transparent;
+  color: var(--fume-dim);
 }
 
-/* ---------- Nav link ---------- */
+.dropcap::first-letter {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 0.8;
+  float: left;
+  margin: 0.5rem 0.6rem 0 0;
+  color: var(--ember);
+}
+
+/* ==========================================================================
+   3. NAVIGATION
+   ========================================================================== */
+
 .nav-link {
   position: relative;
   font-family: 'Inter', sans-serif;
@@ -446,29 +232,423 @@
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: -6px;
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--ember);
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 999px;
+  background: var(--heat);
+  transition: width 0.32s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link:hover::after { width: 100%; }
+.nav-link:hover::after,
+.nav-link:focus-visible::after { width: 100%; }
 
-/* ---------- Page-load fade ---------- */
-main { animation: fadeIn 0.35s ease-out; }
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ==========================================================================
+   4. KORT — mørk plade med varmestribe der tændes ved hover
+   ========================================================================== */
+
+.issue-card {
+  position: relative;
+  background: var(--grate);
+  border: 1px solid var(--edge);
+  border-radius: 14px;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.4s,
+    box-shadow 0.4s,
+    background-color 0.4s;
+}
+.issue-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--heat);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: 3;
+}
+.issue-card:hover,
+.issue-card:focus-visible {
+  transform: translateY(-6px);
+  border-color: var(--edge-hi);
+  background: var(--grate-hi);
+  box-shadow: 0 26px 55px -26px rgba(0, 0, 0, 0.9), 0 0 46px -22px rgba(255, 122, 24, 0.5);
+}
+.issue-card:hover::before,
+.issue-card:focus-visible::before { transform: scaleX(1); }
+
+.issue-card .photo {
+  position: relative;
+  overflow: hidden;
+  background: var(--coal);
+}
+.issue-card .photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 10, 9, 0.15) 0%, rgba(12, 10, 9, 0.75) 100%);
+  transition: opacity 0.45s;
+  opacity: 1;
+  z-index: 2;
+}
+.issue-card:hover .photo::after { opacity: 0.6; }
+.issue-card .photo img {
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.issue-card:hover .photo img { transform: scale(1.06); }
+
+.cover-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--coal);
+  border-radius: 16px;
+}
+.cover-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 10, 9, 0.05) 0%, rgba(12, 10, 9, 0.9) 100%);
 }
 
-/* ---------- Misc legacy ---------- */
+/* Kategori-mærkat */
+.category-badge {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  color: var(--sear);
+  border: 1px solid rgba(255, 122, 24, 0.45);
+  background: rgba(12, 10, 9, 0.65);
+  backdrop-filter: blur(6px);
+  display: inline-block;
+  white-space: nowrap;
+}
+.category-badge.on-paper {
+  color: var(--ember);
+  background: rgba(255, 122, 24, 0.08);
+}
+
+/* ==========================================================================
+   5. BRØDTEKST
+   ========================================================================== */
+
+.prose h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.75rem, 1.35rem + 1.6vw, 2.35rem);
+  font-weight: 800;
+  color: var(--bone);
+  margin-top: 3.25rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+.prose h2::after {
+  content: '';
+  display: block;
+  width: 3.5rem;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--heat);
+  margin-top: 0.85rem;
+  margin-bottom: 1.35rem;
+}
+
+.prose h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--glow);
+  margin-top: 2.4rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.prose p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.075rem;
+  line-height: 1.82;
+  color: var(--fume);
+  margin-bottom: 1.45rem;
+}
+
+.prose ul, .prose ol {
+  margin: 1.3rem 0 1.9rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.prose ul li {
+  position: relative;
+  padding-left: 1.85rem;
+  font-size: 1.04rem;
+  line-height: 1.78;
+  color: var(--fume);
+  margin-bottom: 0.7rem;
+}
+.prose ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72rem;
+  width: 0.7rem;
+  height: 0.28rem;
+  border-radius: 999px;
+  background: var(--heat);
+}
+
+.prose ol { counter-reset: olcount; }
+.prose ol li {
+  position: relative;
+  padding-left: 2.75rem;
+  font-size: 1.04rem;
+  line-height: 1.78;
+  color: var(--fume);
+  margin-bottom: 0.95rem;
+  counter-increment: olcount;
+}
+.prose ol li::before {
+  content: counter(olcount, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.28rem;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ember);
+  letter-spacing: 0.05em;
+}
+
+.prose li strong { color: var(--bone); font-weight: 600; }
+.prose strong { color: var(--bone); font-weight: 600; }
+.prose em { color: var(--glow); font-style: italic; }
+
+.prose a {
+  color: var(--ember);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(255, 122, 24, 0.4);
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+.prose a:hover {
+  color: var(--glow);
+  text-decoration-color: var(--glow);
+}
+
+.prose blockquote {
+  border: none;
+  border-left: 3px solid transparent;
+  border-image: var(--heat-v) 1;
+  padding: 0.4rem 0 0.4rem 1.75rem;
+  margin: 2.5rem 0;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  color: var(--sear);
+}
+
+/* ==========================================================================
+   6. TIP-BOKS — kort med varmestribe i venstre kant
+   ========================================================================== */
+
+.tip-box {
+  position: relative;
+  background: var(--grate);
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+  padding: 1.9rem 1.75rem 1.6rem;
+  margin: 2.4rem 0;
+  color: var(--fume);
+  font-size: 1rem;
+  line-height: 1.75;
+  overflow: hidden;
+}
+.tip-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background: var(--heat-v);
+}
+.tip-box::before {
+  content: 'TIP';
+  position: absolute;
+  top: 0.85rem;
+  right: 1.1rem;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--ember);
+  opacity: 0.85;
+}
+.tip-box strong { color: var(--sear); font-weight: 700; }
+
+/* ==========================================================================
+   7. TEMPERATURTABEL — aflæsninger i mono
+   ========================================================================== */
+
+.temp-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2.25rem 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--grate);
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.temp-table th {
+  background: var(--coal);
+  color: var(--ember);
+  padding: 0.9rem 1.05rem;
+  text-align: left;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 700;
+  font-size: 0.63rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid var(--edge);
+}
+.temp-table td {
+  padding: 0.9rem 1.05rem;
+  border-bottom: 1px solid var(--edge);
+  font-size: 0.95rem;
+  color: var(--fume);
+  font-variant-numeric: tabular-nums;
+}
+.temp-table td strong { color: var(--bone); }
+.temp-table tr:last-child td { border-bottom: none; }
+.temp-table tbody tr { transition: background-color 0.2s; }
+.temp-table tbody tr:hover td { background: var(--grate-hi); }
+
+@media (min-width: 640px) {
+  .temp-table { display: table; white-space: normal; }
+}
+
+/* ==========================================================================
+   8. MEDIER
+   ========================================================================== */
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 2.25rem 0;
+  border-radius: 14px;
+  border: 1px solid var(--edge);
+  background: var(--coal);
+}
+.video-container iframe {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%; border: 0;
+}
+
+.image-credit {
+  font-size: 0.68rem;
+  color: var(--fume-dim);
+  text-align: right;
+  margin-top: 0.45rem;
+  letter-spacing: 0.02em;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+.image-credit a { color: var(--fume-dim); text-decoration: underline; }
+.image-credit a:hover { color: var(--ember); }
+
 .section-divider {
   height: 1px;
-  background: var(--paper-edge);
+  background: var(--edge);
   border: none;
   margin: 0;
 }
-.ember-glow {
-  box-shadow: 0 0 0 1px rgba(216, 84, 32, 0.2), 0 12px 30px -8px rgba(90, 24, 24, 0.25);
+
+/* ==========================================================================
+   9. LEXHUB-ARTIKLER (HTML fra API)
+   ========================================================================== */
+
+.article-content { color: var(--fume); font-size: 1.06rem; line-height: 1.82; }
+.article-content h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.9rem; font-weight: 800; color: var(--bone);
+  margin: 2.75rem 0 0.9rem; letter-spacing: -0.03em;
 }
+.article-content h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.25rem; font-weight: 700; color: var(--glow);
+  margin: 2rem 0 0.65rem; letter-spacing: -0.02em;
+}
+.article-content p { margin-bottom: 1.4rem; }
+.article-content ul, .article-content ol { margin: 1.2rem 0 1.7rem 1.4rem; }
+.article-content li { margin-bottom: 0.5rem; }
+.article-content ul { list-style: disc; }
+.article-content ol { list-style: decimal; }
+.article-content li::marker { color: var(--ember); }
+.article-content a { color: var(--ember); text-decoration: underline; text-underline-offset: 3px; }
+.article-content a:hover { color: var(--glow); }
+.article-content strong { color: var(--bone); }
+.article-content img { border-radius: 12px; margin: 1.75rem 0; }
+.article-content blockquote {
+  border-left: 3px solid var(--ember);
+  padding-left: 1.4rem; margin: 2rem 0; color: var(--sear); font-style: italic;
+}
+
+/* ==========================================================================
+   10. BEVÆGELSE
+   ========================================================================== */
+
+main { animation: riseIn 0.45s cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes emberPulse {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.06); }
+}
+.ember-pulse { animation: emberPulse 4.5s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Ornamental divider — bevaret klassenavn */
+.flame-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  margin: 2rem 0;
+}
+.flame-divider::before,
+.flame-divider::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, var(--edge-hi), transparent);
+}
+.flame-divider svg { flex-shrink: 0; }
