@@ -10,10 +10,6 @@ export const metadata: Metadata = {
   },
   description:
     "Et redaktionelt grillmagasin om røg, glød og håndværk. Guides, opskrifter, teknikker og anmeldelser - fra første tænding til perfekt brisket.",
-  // BEMÆRK: sæt ALDRIG en default canonical her. Metadata arves ned i
-  // segmenterne, så en canonical i layoutet gør, at enhver side der glemmer
-  // at overskrive den, peger på forsiden. Det skete for /artikler og alle
-  // LexHub-artikler under den. Hver side sætter sin egen canonical.
   openGraph: {
     siteName: "Grillbogen.dk",
     locale: "da_DK",
