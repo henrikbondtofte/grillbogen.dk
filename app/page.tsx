@@ -178,6 +178,39 @@ const articles = [
     imageCredit: "Anthony Cantin",
   },
   {
+    slug: "spareribs-paa-grillen",
+    title: "Spareribs på grillen",
+    excerpt:
+      "3-2-1 metoden trin for trin - membran, rub, folie og glaze. Plus den hurtige vej når tiden er knap.",
+    category: "Opskrift",
+    image:
+      "https://images.unsplash.com/photo-1558030137-d464dd688b00?w=900&h=700&fit=crop",
+    imageAlt: "Spareribs med mørk bark på grillristen",
+    imageCredit: "Emerson Vieira",
+  },
+  {
+    slug: "kylling-paa-grillen",
+    title: "Kylling på grillen",
+    excerpt:
+      "Hel kylling, bryst og lår uden tørt kød. Spatchcock, saltlage og kernetemperaturerne der afgør det hele.",
+    category: "Opskrift",
+    image:
+      "https://images.unsplash.com/photo-1712579733874-c3a79f0f9d12?w=900&h=700&fit=crop",
+    imageAlt: "Hel kylling med gyldent skind under tilberedning på grillen",
+    imageCredit: "Sven Lippmann",
+  },
+  {
+    slug: "grillspyd",
+    title: "Grillspyd",
+    excerpt:
+      "Rene spyd slår blandede. Kød, marinader, pakning og tider - og hvorfor metalspyd vinder over træ.",
+    category: "Opskrift",
+    image:
+      "https://images.unsplash.com/photo-1626323109252-0adb3b46692b?w=900&h=700&fit=crop",
+    imageAlt: "Grillspyd med kød over glødende kul",
+    imageCredit: "Z Grills Australia",
+  },
+  {
     slug: "grillet-majs",
     title: "Grillet majs",
     excerpt:

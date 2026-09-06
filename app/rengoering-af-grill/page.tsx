@@ -250,7 +250,7 @@ export default function RengoeringAfGrill() {
           <h2>Rengøringsmidler: Hvad virker og hvad er spild</h2>
           <ul>
             <li><strong>Varmt vand + opvaskemiddel:</strong> Virker til 90% af alt. Billigt, effektivt, ufarligt for maden.</li>
-            <li><strong>Natron (bagesoda):</strong> Blandet med vand til en pasta er det fantastisk til indbrændt fedt. Påfør, vent 20 minutter, skrub af.</li>
+            <li><strong>Natron (bagesoda):</strong> Blandet med vand til en pasta løsner det selv indbrændt fedt. Påfør, vent 20 minutter, skrub af.</li>
             <li><strong>Eddike:</strong> Opløser kalk og let fedtfilm. Spray på, vent 10 minutter, tør af.</li>
             <li><strong>Specialrengøring til grill:</strong> Virker godt til ekstreme tilfælde, men er sjældent nødvendigt hvis du vedligeholder løbende. Skyl ALTID grundigt efter - du vil ikke have kemikalier på din rist.</li>
             <li><strong>Ovnrens:</strong> Effektivt men aggressivt. Kun til riste og dele der kan skylles grundigt. Brug ALDRIG på coatede overflader eller indersiden af grillen.</li>
