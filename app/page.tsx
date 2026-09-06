@@ -184,9 +184,9 @@ const articles = [
       "Tre metoder, tider og temperaturer - plus kryddersmør og elote. Tilbehøret der klarer sig selv.",
     category: "Opskrift",
     image:
-      "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=900&h=700&fit=crop",
-    imageAlt: "Farverige grøntsager skåret klar til grillen",
-    imageCredit: "Dane Deaner",
+      "https://images.unsplash.com/photo-1653886764100-60e01f57bd1d?w=900&h=700&fit=crop",
+    imageAlt: "Grillede majskolber med brunede pletter over glødende kul",
+    imageCredit: "Tim Mossholder",
   },
 ];
 

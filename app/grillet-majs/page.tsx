@@ -79,8 +79,8 @@ export default function GrilletMajs() {
       <ArticleSchema />
       <div className="relative h-72 md:h-96 bg-[var(--obsidian)] overflow-hidden grain-texture">
         <Image
-          src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=1400&h=500&fit=crop"
-          alt="Farverige grøntsager skåret og lagt klar til grillen"
+          src="https://images.unsplash.com/photo-1653886764100-60e01f57bd1d?w=1400&h=500&fit=crop"
+          alt="Grillede majskolber med brunede pletter over glødende kul"
           fill
           className="object-cover opacity-30"
           priority
@@ -220,15 +220,15 @@ export default function GrilletMajs() {
           <div className="relative rounded-2xl overflow-hidden my-10">
             <div className="relative h-72 md:h-80">
               <Image
-                src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&h=450&fit=crop"
-                alt="Forskellige farverige grøntsager skåret klar til grillen"
+                src="https://images.unsplash.com/photo-1533520958595-9ffb2b514373?w=800&h=450&fit=crop"
+                alt="Gadegrillede majskolber med mørke, ristede pletter stillet på højkant"
                 fill
                 loading="lazy"
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 800px"
               />
             </div>
-            <p className="image-credit">Foto: <a href="https://unsplash.com/@danedeaner" target="_blank" rel="noopener noreferrer">Dane Deaner</a> / Unsplash</p>
+            <p className="image-credit">Foto: <a href="https://unsplash.com/@photo4msnp" target="_blank" rel="noopener noreferrer">Prasad SN</a> / Unsplash</p>
           </div>
 
           <h2>Timing i forhold til resten af maden</h2>
